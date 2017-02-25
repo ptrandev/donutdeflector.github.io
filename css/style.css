@@ -30,7 +30,7 @@ a {
   -transition: all 0.15s ease-in;
 }
 
-.button-primary:hover {
+.button, .button-primary {
   -moz-transition: all 0.15s ease-in;
   -o-transition: all 0.15s ease-in;
   -webkit-transition: all 0.15s ease-in;
