@@ -158,9 +158,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #D64873; }
 a:hover {
-  color: #0FA0CE; }
+  color: #D63364; }
 
 
 /* Buttons
@@ -206,8 +206,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0; }
+  background-color: #D64873;
+  border-color: #D64873; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -219,8 +219,8 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB; }
+  background-color: #D63364;
+  border-color: #D63364; }
 
 
 /* Forms
@@ -266,7 +266,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33C3F0;
+  border: 1px solid #D63364;
   outline: 0; }
 label,
 legend {
@@ -276,9 +276,6 @@ legend {
 fieldset {
   padding: 0;
   border-width: 0; }
-input[type="checkbox"],
-input[type="radio"] {
-  display: inline; }
 label > .label-body {
   display: inline-block;
   margin-left: .5rem;
@@ -377,7 +374,7 @@ hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0;
-  border-top: 1px solid #E1E1E1; }
+  border-top: 1px solid #606060; }
 
 
 /* Clearing
