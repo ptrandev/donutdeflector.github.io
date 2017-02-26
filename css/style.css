@@ -13,24 +13,13 @@ body {
 }
 
 main {
-  padding-top: 85px;
+  padding-top: 85px
 }
 
-a {
-  -moz-transition: all 0.15s ease-in;
-  -o-transition: all 0.15s ease-in;
-  -webkit-transition: all 0.15s ease-in;
-  -transition: all 0.15s ease-in;
-}
-
-.luxbar-item {
-  -moz-transition: all 0.15s ease-in;
-  -o-transition: all 0.15s ease-in;
-  -webkit-transition: all 0.15s ease-in;
-  -transition: all 0.15s ease-in;
-}
-
-.button, .button-primary {
+a,
+.luxbar-item,
+.button,
+.button-primary {
   -moz-transition: all 0.15s ease-in;
   -o-transition: all 0.15s ease-in;
   -webkit-transition: all 0.15s ease-in;
@@ -41,7 +30,8 @@ footer {
   color: #606060;
 }
 
-footer a:link, footer a:visited {
+footer a:link,
+footer a:visited {
   color: #212121;
   text-decoration: none;
 }
@@ -50,3 +40,23 @@ footer a:hover {
   color: #D63364;
   text-decoration: none;
 }
+
+.luxbar-fixed {
+  width: 100%;
+  max-width: 768px;
+}
+
+@media (min-width: 320px) {
+.luxbar-fixed  {
+  width: 87.5%;
+}
+}
+
+@media (min-width: 400px) {
+  .luxbar-fixed {
+    width: 85%; }
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .luxbar-fixed {
+    width: 80%; }
