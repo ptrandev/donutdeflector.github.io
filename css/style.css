@@ -6,12 +6,6 @@
         url("../fonts/AverageSans-Regular.ttf");
 }
 
-body {
-  font-family: "Average Sans Regular", sans-serif;
-  background-color: #D6DAE4;
-  color: #212121;
-}
-
 main {
   padding-top: 85px
 }
