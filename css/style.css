@@ -11,7 +11,7 @@ main {
 }
 
 main a:hover,
-main a:visited {
+main a:active {
   color: #D63364;
 }
 
