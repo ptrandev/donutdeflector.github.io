@@ -26,10 +26,6 @@ a,
   -transition: all 0.15s ease-in;
 }
 
-a:link, a:visited {
-
-}
-
 footer {
   color: #606060;
 }
@@ -64,7 +60,6 @@ footer a:hover, footer a:active {
   .luxbar-fixed {
     width: 85%; }
 
-/* For devices larger than 550px */
 @media (min-width: 550px) {
   .luxbar-fixed {
     width: 80%; }
