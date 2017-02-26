@@ -16,6 +16,11 @@ main {
   padding-top: 85px
 }
 
+main a:hover,
+main a:visited {
+  color: #D63364;
+}
+
 a,
 .luxbar-item,
 .button,
@@ -36,7 +41,7 @@ footer a:visited {
   text-decoration: none;
 }
 
-footer a:hover, 
+footer a:hover,
 footer a:active {
   color: #D63364;
   text-decoration: none;
@@ -59,12 +64,12 @@ footer a:active {
 
 @media (min-width: 400px) {
   .luxbar-fixed {
-    width: 85%; 
+    width: 85%;
 }
 }
 
 @media (min-width: 550px) {
   .luxbar-fixed {
-    width: 80%; 
+    width: 80%;
 }
 }
