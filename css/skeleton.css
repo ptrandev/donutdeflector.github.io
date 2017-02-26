@@ -31,7 +31,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 768px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -158,9 +158,11 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #D64873; }
+  color: #D65E82;
+  text-decoration: none; }
 a:hover {
-  color: #D63364; }
+  color: #D63364;
+ }
 
 
 /* Buttons
@@ -206,8 +208,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: #D64873;
-  border-color: #D64873; }
+  background-color: #D65E82;
+  border-color: #D65E82; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
