@@ -13,6 +13,7 @@ main {
 main a:hover,
 main a:active {
   color: #D63364;
+  text-decoration: underline;
 }
 
 a,

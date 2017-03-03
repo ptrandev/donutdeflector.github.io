@@ -163,7 +163,7 @@ a {
   color: #D65E82;
   text-decoration: none; }
 a:hover {
-  color: #D63364;
+  color: #D64873;
  }
 
 
@@ -223,8 +223,8 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #D63364;
-  border-color: #D63364; }
+  background-color: #D64873;
+  border-color: #D64873; }
 
 
 /* Forms
@@ -270,7 +270,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #D63364;
+  border: 1px solid #D64873;
   outline: 0; }
 label,
 legend {
