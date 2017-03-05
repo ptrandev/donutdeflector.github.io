@@ -312,13 +312,14 @@ code {
   margin: 0 .2rem;
   font-size: 90%;
   white-space: nowrap;
-  background: #F1F1F1;
+  background: #EAEAEA;
   border: 1px solid #E1E1E1;
   border-radius: 4px; }
 pre > code {
   display: block;
-  padding: 1rem 1.5rem;
-  white-space: pre; }
+  padding: .5rem;
+  white-space: pre;
+  overflow-x: scroll;}
 
 
 /* Tables

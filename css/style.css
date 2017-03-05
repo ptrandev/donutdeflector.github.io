@@ -51,6 +51,19 @@ footer a:active {
   max-width: 768px;
 }
 
+.aside-info {
+  display: inline;
+}
+
+.aside-title {
+  display: inline-block;
+  width: 100px;
+}
+
+.rwd-break {
+  display: block;
+}
+
 @media (min-width: 320px) {
 .luxbar-fixed  {
   width: 87.5%;
@@ -58,13 +71,19 @@ footer a:active {
 }
 
 @media (min-width: 400px) {
-  .luxbar-fixed {
-    width: 85%;
+.luxbar-fixed {
+  width: 85%;
 }
 }
 
 @media (min-width: 550px) {
-  .luxbar-fixed {
-    width: 80%;
+.luxbar-fixed {
+  width: 80%;
+}
+.aside-info {
+  display: block;
+}
+.rwd-break {
+  display: none;
 }
 }

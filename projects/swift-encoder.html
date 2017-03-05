@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>DonutDeflector</title>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#D6DAE4">
+    <link rel="manifest" href="manifest.json">
+    <style>.luxbar-fixed{width:100%;position:fixed;z-index:1000;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24)}.luxbar-hamburger span,.luxbar-hamburger span::before,.luxbar-hamburger span::after{display:block;height:2px;width:26px;transition:0.6s ease}.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span{background-color:transparent}.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::before,.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::after{margin-top:0}.luxbar-header{display:flex;flex-direction:row;justify-content:space-between;align-items:center;height:58px}.luxbar-menu-left .luxbar-navigation,.luxbar-menu-left .luxbar-header{justify-content:flex-start}.luxbar-menu-right .luxbar-hamburger{margin-left:auto}.luxbar-brand{font-size:1.6em;padding:18px 24px 18px 24px}.luxbar-menu{min-height:58px;transition:0.6s ease;width:100%}.luxbar-navigation{display:flex;flex-direction:column;list-style:none;padding-left:0;margin:0}.luxbar-menu a,.luxbar-item a{text-decoration:none;color:inherit;cursor:pointer}.luxbar-item{height:58px}.luxbar-item a{padding:18px 24px 18px 24px;display:block}.luxbar-hamburger{padding:18px 24px 18px 24px;position:relative;cursor:pointer}.luxbar-hamburger span::before,.luxbar-hamburger span::after{content:'';position:absolute}.luxbar-hamburger span::before{margin-top:-8px}.luxbar-hamburger span::after{margin-top:8px}.luxbar-checkbox{display:none}.luxbar-checkbox:not(:checked) ~ .luxbar-menu{overflow:hidden;height:58px}.luxbar-checkbox:checked ~ .luxbar-menu{transition:height 0.6s ease;height:100vh;overflow:auto}.dropdown{position:relative;height:auto;min-height:58px}.dropdown:hover>ul{position:relative;display:block;min-width:100%}.dropdown>a::after{position:absolute;content:'';right:10px;top:25px;border-width:5px 5px 0;border-color:transparent;border-style:solid}.dropdown>ul{display:block;overflow-x:hidden;list-style:none;padding:0}.dropdown>ul .luxbar-item{min-width:100%;height:29px;padding:5px 10px 5px 40px}.dropdown>ul .luxbar-item a{min-height:29px;line-height:29px;padding:0}@media screen and (min-width: 650px){.luxbar-navigation{flex-flow:row;justify-content:flex-end}.luxbar-hamburger{display:none}.luxbar-checkbox:not(:checked) ~ .luxbar-menu{overflow:visible}.luxbar-checkbox:checked ~ .luxbar-menu{`height`:58px}.luxbar-menu .luxbar-item{border-top:0}.luxbar-menu-right .luxbar-header{margin-right:auto}.dropdown{height:58px}.dropdown:hover>ul{position:absolute;left:0;top:58px;padding:0}.dropdown>ul{display:none}.dropdown>ul .luxbar-item{padding:5px 10px}.dropdown>ul .luxbar-item a{white-space:nowrap}}.luxbar-checkbox:checked+.luxbar-menu .luxbar-hamburger-doublespin span::before{transform:rotate(225deg)}.luxbar-checkbox:checked+.luxbar-menu .luxbar-hamburger-doublespin span::after{transform:rotate(-225deg)}.luxbar-checkbox:checked+.luxbar-menu .luxbar-hamburger-spin span::before{transform:rotate(45deg)}.luxbar-checkbox:checked+.luxbar-menu .luxbar-hamburger-spin span::after{transform:rotate(-45deg)}.luxbar-menu-dark,.luxbar-menu-dark .dropdown ul{background-color:#212121;color:#D6DAE4}.luxbar-menu-dark .active,.luxbar-menu-dark .luxbar-item:hover{background-color:#606060}.luxbar-menu-dark .luxbar-hamburger span,.luxbar-menu-dark .luxbar-hamburger span::before,.luxbar-menu-dark .luxbar-hamburger span::after{background-color:#D6DAE4}</style>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>(function(w){"use strict";var loadCSS=function(href,before,media){var doc=w.document;var ss=doc.createElement("link");var ref;if(before){ref=before}else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";function ready(cb){if(doc.body){return cb()}setTimeout(function(){ready(cb)})}ready(function(){ref.parentNode.insertBefore(ss,(before?ref:ref.nextSibling))});var onloadcssdefined=function(cb){var resolvedHref=ss.href;var i=sheets.length;while(i--){if(sheets[i].href===resolvedHref){return cb()}}setTimeout(function(){onloadcssdefined(cb)})};function loadCB(){if(ss.addEventListener){ss.removeEventListener("load",loadCB)}ss.media=media||"all"}if(ss.addEventListener){ss.addEventListener("load",loadCB)}ss.onloadcssdefined=onloadcssdefined;onloadcssdefined(loadCB);return ss};if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));(function(w){if(!w.loadCSS){return}var rp=loadCSS.relpreload={};rp.support=function(){try{return w.document.createElement("link").relList.supports("preload")}catch(e){}};rp.poly=function(){var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i+=1){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"){w.loadCSS(link.href,link);link.rel=null}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,300);if(w.addEventListener){w.addEventListener("load",function(){w.clearInterval(run)})}}}(this));</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+<body>
+<div class="container">
+  <div class="luxbar luxbar-fixed">
+    <input type="checkbox" id="luxbar-checkbox" class="luxbar-checkbox">
+    <div class="luxbar-menu luxbar-menu-right luxbar-menu-dark">
+        <ul class="luxbar-navigation">
+            <li class="luxbar-header">
+                <a class="luxbar-brand" href="index.html">DonutDeflector</a>
+                <label class="luxbar-hamburger luxbar-hamburger-spin" for="luxbar-checkbox"><span></span></label>
+            </li>
+            <li class="luxbar-item"><a href="../index.html">Home</a></li>
+            <li class="luxbar-item active"><a href="../projects.html">Projects</a></li>
+            <li class="luxbar-item"><a href="../contact.html">Contact</a></li>
+        </ul>
+    </div>
+  </div>
+
+<main>
+  <h1>swift-encoder</h1>
+  <img style="width:100%;padding-bottom:10px" src="../images/swift-encoder-hero-768px.png"/>
+
+  <div class="row">
+    <div class="one-third column aside">
+      <p>
+        <span class="aside-title"><b>Year</b></span>
+        <span class="aside-info">Q4 2016</span>
+        <br class="rwd-break">
+        <span class="aside-title"><b>Languages</b></span>
+        <span class="aside-info">Shell</span>
+        <br class="rwd-break">
+        <span class="aside-title"><b>License</b></span>
+        <span class="aside-info">MIT</span>
+        <br class="rwd-break">
+        <span class="aside-title"><b>Source Code</b></span>
+        <span class="aside-info"><a href="https://github.com/DonutDeflector/swift-encoder">Github</a></span>
+        <br class="rwd-break">
+        <span class="aside-title"><b>Resources</b></span>
+        <span class="aside-info"><a href="https://ffmpeg.org/ffmpeg.html">FFmpeg Docs</a></span>
+      </p>
+    </div>
+    <div class="two-thirds column">
+      <hr>
+      <p>A fire-and-forget shell script that encodes multiple video files with
+      ffmpeg.</p>
+      <h3>Function</h3>
+        <p>The purpose of swift-ffmpeg is to simplify and automate the encoding
+        of multiple video files. Once executed by the user, the script will
+        automatically batch encode video files in a given folder. Encoding
+        options are easily accessable by editing the variables within
+        <code>swift-encoder.sh</code>.</p>
+      <h3>Development</h3>
+        <p>I encode piles and piles of video for archival purposes and needed a
+        way to futher my addicton by making automating the process. Looking
+        around on the interwebz brought me to a project called
+        <a href="https://github.com/FallingSnow/h265ize">h265ize</a>. It's built
+        off of NodeJS. (Insert light-hearted joke about hipster-based framework
+        here.)</p>
+        <p>h265ize isn't terrible. In fact it's quite good. However it always
+        automatically cropped my 1080p content down to 1792p for whatever
+        reason. It's fixed now</p>
+    </div>
+  </div>
+
+</main>
+
+<hr>
+
+<footer>
+  <p style="display:inline-block;">
+    <a href="mailto:donutdeflector@protonmail.com">Email</a> |
+    <a href="https://github.com/DonutDeflector">Github</a> |
+    <a href="https://medium.com/@DonutDeflector">Medium</a> |
+    <a href="https://www.youtube.com/channel/thedonutdeflector">YouTube</a>
+  </p>
+  <p style="float:right">&copy; 2017 Phillip T.</p>
+</footer>
+</div>
+</body>
+</html>
+
+<!--
+<p>A fire-and-forget shell script that encodes multiple video files with ffmpeg.</p>
+
+<h3>Function</h3>
+<p>The purpose of swift-ffmpeg is to simplify and automate the encoding of multiple
+  video files. Once executed by the user, the script will automatically batch
+  encode video files in a given folder. Encoding options are easily accessable by
+  editing the variables within <code>swift-encoder.sh</code>.</p>
+
+  <h3>Usage (For Linux)</h3>
+  <h5>Package Requirements:</h5>
+  <ol>
+    <li>ffmpeg</li>
+    <li>git (optional)</li>
+  </ol>
+
+  <h5>Obtaining</h5>
+  <ol>
+    <li><a href="https://github.com/DonutDeflector/swift-encoder/archive/master.zip">
+      Download the zip</a> or clone the git repo with:
+      <pre><code>git clone https://github.com/DonutDeflector/swift-encoder.git</code></pre></li>
+      <li>Move <code>swift-encoder.sh</code> to a directory of your
+        choice. I recommend your home folder.</li>
+        <li>Give the script execute permissions:
+          <pre><code>chmod +x /path/to/swift-encoder.sh</code></pre></li>
+        </ol>
+
+        <h5>Operation</h5>
+        <p>This script is very easy to use:</p>
+        <ol>
+          <li>Change the encoding options as you see fit in the
+            <code>swift-encoder.sh</code> file.</li>
+            <li>Run the script:
+              <pre><code>sh swift-encoder.sh optimization /path/to/source/files</code></pre></li>
+              <ul>
+                <li>example: <pre><code>sh swift-encoder.sh anime /home/donut/Videos/NGE</code></pre></li>
+                <li>example: <pre><code>sh swift-encoder.sh normal /home/donut/Videos/Sports\ Cam</code></pre></li>
+              </ul>
+              <p><strong>Note:</strong> The script will default to <code>normal</code>
+                if the optimization is misspelled.</p></li>
+                <li>Sit back, relax, and wait for your files to finish encoding.
+                  Once the script is finshed running, the files will be moved into a
+                  folder called <code>completed</code> with <code>[se]</code> appended
+                  to them.</li>
+                </ol>
+
+                <h3>Modification and Redistribution</h3>
+                <p><strong>From LICENSE.txt:</strong></p>
+                <pre><code>The MIT License (MIT)
+
+                  Copyright (c) 2016 Phillip T.
+
+                  Permission is hereby granted, free of charge, to any person obtaining a copy
+                  of this software and associated documentation files (the "Software"), to deal
+                  in the Software without restriction, including without limitation the rights
+                  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                  copies of the Software, and to permit persons to whom the Software is
+                  furnished to do so, subject to the following conditions:
+
+                  The above copyright notice and this permission notice shall be included in all
+                  copies or substantial portions of the Software.
+
+                  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                  SOFTWARE.
+                </code></pre>
+-->
