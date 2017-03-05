@@ -7,13 +7,17 @@
 }
 
 main {
-  padding-top: 85px
+  padding-top: 85px;
 }
 
 main a:hover,
 main a:active {
   color: #D63364;
   text-decoration: underline;
+}
+
+a:hover {
+  color:#D64873;
 }
 
 a,
