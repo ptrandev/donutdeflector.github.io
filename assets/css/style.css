@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Average Sans Regular";
+  src:  local("Average Sans Regular"),
+        url("../fonts/AverageSans-Regular.woff2"),
+        url("../fonts/AverageSans-Regular.woff"),
+        url("../fonts/AverageSans-Regular.ttf");
+}
+
+main {
+  padding-top: 85px;
+}
+
+main a:hover,
+main a:active {
+  color: #D63364;
+  text-decoration: underline;
+}
+
+a:hover {
+  color:#D64873;
+}
+
+a,
+.luxbar-item,
+.button,
+.button-primary {
+  -moz-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  -webkit-transition: all 0.15s ease-in;
+  -transition: all 0.15s ease-in;
+}
+
+footer {
+  color: #606060;
+}
+
+footer a:link,
+footer a:visited {
+  color: #212121;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:active {
+  color: #D63364;
+  text-decoration: none;
+}
+
+.footnote {
+  font-size: 1.4rem;
+}
+
+.luxbar-fixed {
+  width: 100%;
+  max-width: 768px;
+}
+
+.aside-info {
+  display: inline;
+}
+
+.aside-title {
+  display: inline-block;
+  width: 100px;
+}
+
+.rwd-break {
+  display: block;
+}
+
+@media (min-width: 320px) {
+.luxbar-fixed  {
+  width: 87.5%;
+}
+}
+
+@media (min-width: 400px) {
+.luxbar-fixed {
+  width: 85%;
+}
+}
+
+@media (min-width: 550px) {
+.luxbar-fixed {
+  width: 80%;
+}
+.aside-info {
+  display: block;
+}
+.rwd-break {
+  display: none;
+}
+}
