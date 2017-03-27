@@ -63,6 +63,32 @@ footer a:active {
   display: block;
 }
 
+.desktop-screenshot {
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-left:5px;
+  width: 75%;
+}
+
+.phone-screenshot {
+  top: 20%;
+  right: 1rem;
+  z-index: 5;
+  background-image: url(/assets/images/phone.svg);
+  padding: 6% 2% 0;
+  width: 30%;
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.project-hero {
+  position:relative;
+  margin-bottom:0.75rem;
+  overflow:hidden;
+}
+
 @media (min-width: 320px) {
 .luxbar-fixed  {
   width: 87.5%;

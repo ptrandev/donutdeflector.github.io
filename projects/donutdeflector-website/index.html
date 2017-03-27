@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>DonutDeflector</title>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#D6DAE4">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script>(function(w){"use strict";var loadCSS=function(href,before,media){var doc=w.document;var ss=doc.createElement("link");var ref;if(before){ref=before}else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";function ready(cb){if(doc.body){return cb()}setTimeout(function(){ready(cb)})}ready(function(){ref.parentNode.insertBefore(ss,(before?ref:ref.nextSibling))});var onloadcssdefined=function(cb){var resolvedHref=ss.href;var i=sheets.length;while(i--){if(sheets[i].href===resolvedHref){return cb()}}setTimeout(function(){onloadcssdefined(cb)})};function loadCB(){if(ss.addEventListener){ss.removeEventListener("load",loadCB)}ss.media=media||"all"}if(ss.addEventListener){ss.addEventListener("load",loadCB)}ss.onloadcssdefined=onloadcssdefined;onloadcssdefined(loadCB);return ss};if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));(function(w){if(!w.loadCSS){return}var rp=loadCSS.relpreload={};rp.support=function(){try{return w.document.createElement("link").relList.supports("preload")}catch(e){}};rp.poly=function(){var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i+=1){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"){w.loadCSS(link.href,link);link.rel=null}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,300);if(w.addEventListener){w.addEventListener("load",function(){w.clearInterval(run)})}}}(this));</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+<body>
+<div class="container">
+  <div class="luxbar luxbar-fixed">
+    <input type="checkbox" id="luxbar-checkbox" class="luxbar-checkbox">
+    <div class="luxbar-menu luxbar-menu-right luxbar-menu-dark">
+        <ul class="luxbar-navigation">
+            <li class="luxbar-header">
+                <a class="luxbar-brand" href="/">DonutDeflector</a>
+                <label class="luxbar-hamburger luxbar-hamburger-spin" for="luxbar-checkbox"><span></span></label>
+            </li>
+            <li class="luxbar-item"><a href="/">Home</a></li>
+            <li class="luxbar-item active"><a href="/projects/">Projects</a></li>
+            <li class="luxbar-item"><a href="/contact/">Contact</a></li>
+        </ul>
+    </div>
+  </div>
+
+<main>
+  <h1>donutdeflector website</h1>
+  <div class="twelve columns project-hero">
+  <img class="desktop-screenshot" src="/assets/images/website-hero.png"/>
+  <img class="phone-screenshot" src="/assets/images/website-hero-phone.png"/>
+  </div>
+  <div class="row">
+    <div class="three columns aside" style="padding-top:10px">
+      <p>
+        <span class="aside-title"><b>Year</b></span>
+        <span class="aside-info">Q2 2016</span>
+        <br class="rwd-break">
+        <span class="aside-title"><b>Languages</b></span>
+        <span class="aside-info">Python</span>
+        <br class="rwd-break">
+        <span class="aside-title"><b>License</b></span>
+        <span class="aside-info">MIT</span>
+        <br class="rwd-break">
+        <span class="aside-title"><b>Source Code</b></span>
+        <span class="aside-info"><a href="https://github.com/DonutDeflector/donutdeflector.github.io">Github</a></span>
+      </p>
+    </div>
+    <div class="nine columns" style="padding-top:10px">
+      <hr>
+      <p>The DonutDeflector website.</p>
+    </div>
+  </div>
+
+</main>
+
+<hr>
+
+<footer>
+  <p style="display:inline-block;">
+    <a href="mailto:donutdeflector@protonmail.com">Email</a> |
+    <a href="https://github.com/DonutDeflector">Github</a> |
+    <a href="https://medium.com/@DonutDeflector">Medium</a> |
+    <a href="https://www.youtube.com/channel/thedonutdeflector">YouTube</a>
+  </p>
+  <p style="float:right">&copy; 2017 Phillip T.</p>
+</footer>
+</div>
+</body>
+</html>
