@@ -20,12 +20,12 @@ main {
 
 main a:hover,
 main a:active {
-  color: #D63364;
+  color: #48D6AB;
   text-decoration: underline;
 }
 
 a:hover {
-  color:#D64873;
+  color:#48D6AB;
 }
 
 a,
@@ -51,7 +51,7 @@ footer a:visited {
 
 footer a:hover,
 footer a:active {
-  color: #D63364;
+  color: #48D6AB;
   text-decoration: none;
 }
 
