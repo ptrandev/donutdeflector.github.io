@@ -5,10 +5,7 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#D6DAE4">
     <link rel="manifest" href="/manifest.json">
-    <link rel="stylesheet" href="/assets/css/normalize.css">
-    <link rel="stylesheet" href="/assets/css/skeleton.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <script>(function(w){"use strict";var loadCSS=function(href,before,media){var doc=w.document;var ss=doc.createElement("link");var ref;if(before){ref=before}else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";function ready(cb){if(doc.body){return cb()}setTimeout(function(){ready(cb)})}ready(function(){ref.parentNode.insertBefore(ss,(before?ref:ref.nextSibling))});var onloadcssdefined=function(cb){var resolvedHref=ss.href;var i=sheets.length;while(i--){if(sheets[i].href===resolvedHref){return cb()}}setTimeout(function(){onloadcssdefined(cb)})};function loadCB(){if(ss.addEventListener){ss.removeEventListener("load",loadCB)}ss.media=media||"all"}if(ss.addEventListener){ss.addEventListener("load",loadCB)}ss.onloadcssdefined=onloadcssdefined;onloadcssdefined(loadCB);return ss};if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));(function(w){if(!w.loadCSS){return}var rp=loadCSS.relpreload={};rp.support=function(){try{return w.document.createElement("link").relList.supports("preload")}catch(e){}};rp.poly=function(){var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i+=1){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"){w.loadCSS(link.href,link);link.rel=null}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,300);if(w.addEventListener){w.addEventListener("load",function(){w.clearInterval(run)})}}}(this));</script>
+    <link rel="stylesheet" href="/assets/css/main.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
@@ -49,6 +46,9 @@
         <br class="rwd-break">
         <span class="aside-title"><b>Source Code</b></span>
         <span class="aside-info"><a target="_blank" href="https://github.com/DonutDeflector/donutdeflector.github.io">Github</a></span>
+        <br class="rwd-break">
+        <span class="aside-title"><b>Resources</b></span>
+        <span class="aside-info"><a target="_blank" href="https://developers.google.com/web/fundamentals/">Google Web Fundamentals</a></span>
       </p>
     </div>
     <div class="nine columns">
@@ -85,8 +85,8 @@
         <del>blatantly steal</del> draw inspiritation from them. I decided to
         use a minimal, simple design that still had a bit of flair and
         personality. That means parallax scrolling, thousands of animations, and
-        10MB jQuery files are not allowed.</p>
-        <h5>Color Palette</h5>
+        10MB jQuery files are <b>not</b> allowed.</p>
+        <h4>Color Palette</h4>
         <p>I employed the use of a few grayscale colors in my design, really
         giving my website the whole "minimal and hip" vibe. My main off-white
         is
@@ -103,14 +103,10 @@
         my grayscale colors, giving the accent color more pop. I did have to
         scale the intensity of the pink back to a more pastel color, but that
         was all fine.</p>
-        <p>
-        I've also got a slightly more intense shade of pink,
-        used for hover over effects and other interactivity stuff:
-        <code style="background-color:#D64873;color:#D6DAE4;border:none;">#D64873</code>.
-        I admit, there is not that much of a difference between the two shades.
-        The rationale between using two nearly similar shades of a color is
-        still a mystery to me.</p>
-        <h5>Layout</h5>
+        <p>I've also got a slightly more intense shade of pink, used for hover
+        over effects and other interactivity stuff:
+        <code style="background-color:#D63364;color:#D6DAE4;border:none;">#D63364</code>.</p>
+        <h4>Layout</h4>
         <p>I settled on a pretty simple design: all content in a 768px scaling
         container with a fixed navigation bar on top, content in the middle,
         and footer at the bottom.</p>
@@ -121,14 +117,25 @@
         curved 21:9 displays. However, my layout (and all my content) fits quite
         tidily in 768px. Maybe some day I'll open up to the fact that 960px is
         probably a good practice. Maybe.</p>
-        <h5>Tools and Work</h5>
-        <h6>Development Tools:</h6>
+        <h4>Tools and Work</h4>
+        <p>Building this site was pretty much fiddiling with CSS styling and
+        and doing a whole bunch of random experimentation. Through the process,
+        I learned how to use a few new tools and optimize my site for mobile.</p>
+        <hr>
+        <h5>Development Tools:</h5>
         <ul>
           <li><a target="_blank" href="https://atom.io/">Atom</a> - The development environment and main workhorse.</li>
           <li><a target="_blank" href="https://git-scm.com/">Git</a> - For pushing my changes live onto Github Pages.</li>
           <li><a target="_blank" href="http://cssminifier.com/">CSS Minifier</a> - Minifying CSS to respect bandwidth.</li>
           <li><a target="_blank" href="https://pngquant.org/">pngquant</a> - Lossy compression for PNG images to respect bandwidth.</li>
         </ul>
+        <hr>
+        <p>I read a whole bunch of
+        <a target="_blank" href="https://developers.google.com/web/fundamentals/">Google Web Fundamentals Documentation</a>
+        in the process of building the website and learned how to implement a
+        mobile-friendly design and respect a user's bandwidth. I'm still doing
+        a whole bunch of work on the site: cutting down bloat, smoothing out the
+        design, and thinking of new ideas.</p>
     </div>
   </div>
 
