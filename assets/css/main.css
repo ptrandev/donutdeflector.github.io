@@ -36,7 +36,8 @@ a:hover {
   color:#D63364;
 }
 
-a,
+main a,
+.luxbar-fixed,
 .button,
 .button-primary {
   -moz-transition: all 0.15s ease-in;
@@ -44,6 +45,7 @@ a,
   -webkit-transition: all 0.15s ease-in;
   -transition: all 0.15s ease-in;
 }
+
 
 footer {
   color: #696969;
