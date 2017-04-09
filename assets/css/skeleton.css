@@ -162,8 +162,9 @@ p {
 a {
   color: #D65E82;
   text-decoration: none; }
-a:hover {
+a:hover, a:active {
   color: #D63364;
+  text-decoration: underline;
  }
 
 

@@ -14,17 +14,8 @@ main {
   padding-top: 85px;
 }
 
-main a:hover,
-main a:active {
-  color: #D63364;
-  text-decoration: underline;
-}
-
-a:hover {
-  color:#D63364;
-}
-
 a,
+.luxbar-item,
 .button,
 .button-primary {
   -moz-transition: all 0.15s ease-in;
@@ -46,7 +37,7 @@ footer a:visited {
 footer a:hover,
 footer a:active {
   color: #D63364;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .footnote {
