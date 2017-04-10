@@ -40,6 +40,12 @@ footer a:active {
   text-decoration: underline;
 }
 
+.luxbar a:hover,
+.luxbar a:active {
+  color: #D63364;
+  text-decoration: none;
+}
+
 .footnote {
   font-size: 1.4rem;
 }
