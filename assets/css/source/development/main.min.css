@@ -1118,11 +1118,11 @@ footer a:active {
 }
 
 ::-moz-selection {
-background-color: #d6c9d3;
+background-color: #EFC9D4;
 }
 
 ::selection {
-background-color: #d6c9d3;
+background-color: #EFC9D4;
 }
 
 .footnote {
