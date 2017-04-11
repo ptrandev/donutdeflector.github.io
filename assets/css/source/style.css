@@ -46,6 +46,16 @@ footer a:active {
   text-decoration: none;
 }
 
+::-moz-selection {
+background-color: #D65E82;
+color: #D6DAE4;
+}
+
+::selection {
+background-color: #D65E82;
+color: #D6DAE4;
+}
+
 .footnote {
   font-size: 1.4rem;
 }
