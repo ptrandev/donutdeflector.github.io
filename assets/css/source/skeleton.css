@@ -160,10 +160,10 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #D65E82;
-  text-decoration: none; }
+  color: #673AB7;
+  text-decoration: underline; }
 a:hover, a:active {
-  color: #D63364;
+  color: #6200EA;
   text-decoration: underline;
  }
 
@@ -178,7 +178,7 @@ input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #696969;
+  color: #424242;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -210,9 +210,9 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  color: #FFF;
-  background-color: #D65E82;
-  border-color: #D65E82; }
+  color: #D6DAE4;
+  background-color: #673AB7;
+  border-color: #673AB7; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -223,9 +223,9 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-  color: #FFF;
-  background-color: #D63364;
-  border-color: #D63364; }
+  color: #D6DAE4;
+  background-color: #6200EA;
+  border-color: #6200EA; }
 
 
 /* Forms
@@ -241,8 +241,8 @@ textarea,
 select {
   height: 38px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-  background-color: #fff;
-  border: 1px solid #D1D1D1;
+  background-color: #FAFAFA;
+  border: 1px solid #E1E1E1;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box; }
@@ -271,7 +271,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #D63364;
+  border: 1px solid #6200EA;
   outline: 0; }
 label,
 legend {
@@ -310,7 +310,7 @@ code {
   margin: 0 .2rem;
   font-size: 90%;
   white-space: nowrap;
-  background: #EAEAEA;
+  background: #FAFAFA;
   border: 1px solid #E1E1E1;
   border-radius: 4px; }
 pre > code {
@@ -377,7 +377,7 @@ hr {
   margin-top: 0;
   margin-bottom: 3rem;
   border-width: 0;
-  border-top: 1px solid #606060; }
+  border-top: 1px solid #424242; }
 
 
 /* Clearing
