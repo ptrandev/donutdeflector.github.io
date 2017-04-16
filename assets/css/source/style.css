@@ -46,9 +46,12 @@ footer a:active {
   text-decoration: none;
 }
 
-::-moz-selection,
-::selection {
+::-moz-selection {
 background-color: #D1C4E9;
+}
+
+::selection {
+  background-color: #D1C4E9;
 }
 
 .footnote {
