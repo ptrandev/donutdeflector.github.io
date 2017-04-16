@@ -814,7 +814,7 @@ p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
   color: #673AB7;
-  text-decoration: underline; }
+  text-decoration: none; }
 a:hover, a:active {
   color: #6200EA;
   text-decoration: underline;
