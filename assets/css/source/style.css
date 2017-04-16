@@ -46,10 +46,7 @@ footer a:active {
   text-decoration: none;
 }
 
-::-moz-selection {
-background-color: #D1C4E9;
-}
-
+::-moz-selection,
 ::selection {
 background-color: #D1C4E9;
 }

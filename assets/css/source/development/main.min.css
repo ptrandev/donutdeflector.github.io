@@ -947,12 +947,13 @@ ul {
 ol {
   list-style: decimal; }
 ol, ul {
-  padding-left: 0;
+  padding-left: 15px;
   margin-top: 0; }
 ul ul,
 ul ol,
 ol ol,
 ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
   font-size: 90%; }
 
 
@@ -1117,10 +1118,7 @@ footer a:active {
   text-decoration: none;
 }
 
-::-moz-selection {
-background-color: #D1C4E9;
-}
-
+::-moz-selection,
 ::selection {
 background-color: #D1C4E9;
 }
