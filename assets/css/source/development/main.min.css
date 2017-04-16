@@ -1074,9 +1074,9 @@ there.
 @font-face {
   font-family:"Average Sans Regular";
   src:local("Average Sans Regular"),
-  url("../fonts/AverageSans-Regular.woff2"),
-  url("../fonts/AverageSans-Regular.woff"),
-  url("../fonts/AverageSans-Regular.ttf")
+  url("/assets/fonts/AverageSans-Regular.woff2"),
+  url("/assets/fonts/AverageSans-Regular.woff"),
+  url("/assets/fonts/AverageSans-Regular.ttf")
 }
 
 /* Main CSS */
