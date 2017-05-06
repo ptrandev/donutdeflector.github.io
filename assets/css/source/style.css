@@ -54,6 +54,10 @@ background-color: #D1C4E9;
   background-color: #D1C4E9;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .footnote {
   font-size: 1.4rem;
 }
