@@ -9,7 +9,7 @@ gulp.task('concat', function() {
 });
 
 gulp.task('css', function() {
-    return gulp.src(['src/assets/css/source/dev/main.min.css'])
+    return gulp.src(['src/assets/css/dev/main.min.css'])
       .pipe(unCSS({html: ['*.html', 'contact/*.html', 'projects/*.html', 'projects/**/*.html']}))
       .pipe(cleanCSS({compatibility: 'ie8'}))
       .pipe(cleanCSS({level: '2'}))
