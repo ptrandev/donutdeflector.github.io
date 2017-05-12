@@ -4,12 +4,12 @@ var unCSS = require('gulp-uncss');
 var cleanCSS = require('gulp-clean-css');
 
 gulp.task('concat', function() {
-    gulp.src(['assets/css/source/*.css'])
-      .pipe(shell(['cat assets/css/source/*.css > assets/css/source/development/main.min.css']));
+    gulp.src(['src/assets/css/*.css'])
+      .pipe(shell(['cat src/assets/css/*.css > src/assets/css/dev/main.min.css']));
 });
 
 gulp.task('css', function() {
-    return gulp.src(['assets/css/source/development/main.min.css'])
+    return gulp.src(['src/assets/css/source/dev/main.min.css'])
       .pipe(unCSS({html: ['*.html', 'contact/*.html', 'projects/*.html', 'projects/**/*.html']}))
       .pipe(cleanCSS({compatibility: 'ie8'}))
       .pipe(cleanCSS({level: '2'}))
@@ -17,6 +17,6 @@ gulp.task('css', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('assets/css/source/*.css', ['concat']);
-    gulp.watch('assets/css/source/development/*', ['css']);
+    gulp.watch('src/assets/css/*.css', ['concat']);
+    gulp.watch('src/assets/css/dev/*', ['css']);
 });
