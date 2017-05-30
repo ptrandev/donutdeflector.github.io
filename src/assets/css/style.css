@@ -24,6 +24,10 @@ a,
   -transition: all 0.15s ease-in;
 }
 
+.luxbar-item {
+  font-size: 1.6rem;
+}
+
 footer {
   color: #696969;
 }
@@ -119,6 +123,13 @@ background-color: #D1C4E9;
 .luxbar-fixed {
   width: 85%;
 }
+.footnote {
+  font-size: 1.6rem;
+}
+}
+
+
+@media (min-width: 460px) {
 .copyright {
   float: right;
 }
