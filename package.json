@@ -18,8 +18,12 @@
   "homepage": "https://github.com/DonutDeflector/donutdeflector.github.io#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.4.0",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-imagemin": "^3.3.0",
     "gulp-shell": "^0.6.3",
     "gulp-uncss": "^1.0.6"
+  },
+  "dependencies": {
+    "imagemin-mozjpeg": "^6.0.0"
   }
 }
