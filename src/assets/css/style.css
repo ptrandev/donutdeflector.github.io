@@ -1,147 +1,155 @@
-/* Fonts */
+/* Container */
 
-@font-face {
-  font-family:"Average Sans Regular";
-  src:local("Average Sans Regular"),
-  url("/assets/fonts/AverageSans-Regular.woff2"),
-  url("/assets/fonts/AverageSans-Regular.woff"),
-  url("/assets/fonts/AverageSans-Regular.ttf")
-}
-
-/* Main CSS */
-
-main {
-  padding-top: 85px;
-}
-
-a,
-.luxbar-item,
-.button,
-.button-primary {
-  -moz-transition: all 0.15s ease-in;
-  -o-transition: all 0.15s ease-in;
-  -webkit-transition: all 0.15s ease-in;
-  -transition: all 0.15s ease-in;
-}
-
-.luxbar-item {
-  font-size: 1.6rem;
-}
-
-footer {
-  color: #696969;
-}
-
-footer a:link,
-footer a:visited {
-  color: #212121;
-  text-decoration: none;
-}
-
-footer a:hover,
-footer a:active {
-  color: #6200EA;
-  text-decoration: underline;
-}
-
-.luxbar a:hover,
-.luxbar a:active {
-  color: inherit;
-  text-decoration: none;
-}
-
-::-moz-selection {
-background-color: #D1C4E9;
-}
-
-::selection {
-  background-color: #D1C4E9;
-}
-
-.footnote {
-  font-size: 1.4rem;
-}
-
-.luxbar-fixed {
+.container {
+  position: relative;
   width: 100%;
-  max-width: 768px;
-}
-
-.aside-info {
-  display: inline;
-}
-
-.aside-title {
-  display: inline-block;
-  width: 100px;
-}
-
-.rwd-break {
-  display: block;
-}
-
-.desktop-screenshot {
-  z-index: 1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin-left:5px;
-  width: 75%;
-}
-
-.phone-screenshot {
-  top: 20%;
-  right: 1rem;
-  z-index: 5;
-  background-image: url(/assets/images/phone.svg);
-  padding: 6% 2% 0;
-  width: 30%;
-  display: block;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-.project-hero {
-  position:relative;
-  margin-bottom:0.75rem;
-  overflow:hidden;
-}
-
-.copyright {
-  display: block;
-  float: none;
-}
-
-/* Media Queries */
-
-@media (min-width: 320px) {
-.luxbar-fixed  {
-  width: 87.5%;
-}
-}
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
 
 @media (min-width: 400px) {
-.luxbar-fixed {
-  width: 85%;
-}
-.footnote {
-  font-size: 1.6rem;
-}
-}
-
-@media (min-width: 460px) {
-.copyright {
-  float: right;
-}
+  .container {
+    width: 90%; }
 }
 
 @media (min-width: 550px) {
-.luxbar-fixed {
-  width: 80%;
+  .container {
+    width: 90%; }
 }
-.aside-info {
+
+/* Fonts */
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: 400;
+  font-style: normal;
+  src:local("Rubik"),
+  url("/assets/fonts/Rubik-Regular.woff2"),
+  url("/assets/fonts/Rubik-Regular.woff"),
+  url("/assets/fonts/Rubik-Regular.ttf");
+}
+
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: 700;
+  font-style: normal;
+  src:local("Rubik Bold"),
+  url("/assets/fonts/Rubik-Bold.woff2"),
+  url("/assets/fonts/Rubik-Bold.woff"),
+  url("/assets/fonts/Rubik-Bold.ttf");
+}
+
+.is-center {
+  text-align: center;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* Navigation */
+
+nav {
+  border-bottom: 1px solid #aaa;
+}
+
+nav h4 {
+  margin-bottom: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 2.0rem;
+}
+
+nav li {
+  display: inline-block;
+  padding-right: 5px;
+  margin-top: 0;
+  margin-bottom: 1.0rem;
+}
+
+nav li:last-child {
+  padding-right: 0;
+}
+
+.profile-picture {
+  border: 1px solid #D6DAE4;
+  border-radius: 25%;
+  margin: auto;
+  max-width: 200px;
+}
+
+/* Header */
+
+header h1 {
+  margin: 1.0rem 0 1.5rem;
+}
+
+/* Article */
+
+article {
+  margin: 2rem 0;
+}
+
+.date {
+  display: block;
+  font-size: 1.6rem;
+  padding-bottom: 2.0rem;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 1.5rem;
+}
+
+footer p {
+  font-size: 1.6rem;
+}
+
+.copyright {
   display: block;
 }
-.rwd-break {
-  display: none;
+
+/* Other */
+
+hr {
+  border-width: 0;
+  border-top: 1px solid #aaa;
 }
+
+/* Media Query */
+
+@media (min-width: 500px) {
+  .copyright {
+    display: inline-block;
+    float: right;
+  }
+}
+
+@media (min-width: 1024px) {
+  nav {
+    border-bottom: none;
+    border-right: 1px solid #aaa;
+  }
+
+  nav li {
+    display: block;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+  }
 }

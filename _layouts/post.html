@@ -15,39 +15,37 @@
 
   <body>
 <div class="container">
-  <div class="luxbar luxbar-fixed">
-    <input type="checkbox" id="luxbar-checkbox" class="luxbar-checkbox">
-    <div class="luxbar-menu luxbar-menu-right luxbar-menu-dark">
-        <ul class="luxbar-navigation">
-            <li class="luxbar-header">
-                <a class="luxbar-brand" href="/">DonutDeflector</a>
-                <label class="luxbar-hamburger luxbar-hamburger-spin" for="luxbar-checkbox"><span></span></label>
-            </li>
-            <li class="luxbar-item"><a href="/">Home</a></li>
-            <li class="luxbar-item"><a href="/projects/">Projects</a></li>
-            <li class="luxbar-item"><a href="/contact/">Contact</a></li>
-        </ul>
+
+<div class="pure-g">
+
+    <div class="pure-u-1-1 pure-u-lg-1-4 l-box">
+      {% include nav.html %}
     </div>
-  </div>
+    <div class="pure-u-1-1 pure-u-lg-3-4 l-box">
 
 <main>
+  <header>
+    <h1>Blog</h1>
+  </header>
+
+  <hr>
+
   <article class="post">
-  <h1>{{ page.title }}</h1>
+    <h2 class="no-margin-bottom">{{ page.title }}</h2>
+    <span class="date"> {{page.date | date: "%B %e, %Y"}}</span>
 
   <div class="entry">
     {{ content }}
   </div>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
 </article>
 </main>
 
-<br>
 <hr>
 
 {% include footer.html %}
+</div>
+</div>
 </div>
 </body>
 </html>

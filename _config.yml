@@ -86,3 +86,4 @@ exclude:
   - CNAME
   - src
   - node_modules
+  - gulpfile.js
