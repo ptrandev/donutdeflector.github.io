@@ -1537,7 +1537,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 a {
-  color: #5764c6;
+  color: #4352c6;
   outline: none;
   text-decoration: none;
 }
@@ -1548,7 +1548,7 @@ a:focus,
 a:hover,
 a:active,
 a.active {
-  color: #3b49af;
+  color: #2f41c6;
   text-decoration: underline;
 }
 h1,
