@@ -111,6 +111,28 @@ article {
   padding-bottom: 2.0rem;
 }
 
+/* Categories */
+
+.categories ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.categories li {
+  display: inline-block;
+  padding: 2px 5px 0px;
+  margin-right: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #f1f1f1;
+}
+
+.categories li:last-child {
+  margin-right: 0;
+}
+
 /* Footer */
 
 footer {

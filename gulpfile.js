@@ -12,7 +12,7 @@ gulp.task('concat', function() {
 
 gulp.task('css', function() {
     return gulp.src(['src/assets/css/dev/main.min.css'])
-      .pipe(unCSS({html: ['*.html', 'blog/*.html', '_layouts/*.html', '_includes/*.html']}))
+      .pipe(unCSS({html: ['*.html', 'blog/*.html', 'projects/*.html', '_layouts/*.html', '_includes/*.html']}))
       .pipe(cleanCSS({compatibility: 'ie8'}))
       .pipe(cleanCSS({level: '2'}))
       .pipe(gulp.dest('assets/css'));

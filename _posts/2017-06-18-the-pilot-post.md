@@ -3,6 +3,7 @@ layout: post
 title:  The Pilot Post
 date:   2017-07-17
 categories: pilot website
+tags: [pilot, website]
 ---
 
 Hello and welcome to the beginning of my blog. I'll be talking mainly about
