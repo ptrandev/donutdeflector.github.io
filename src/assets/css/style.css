@@ -126,7 +126,7 @@ article {
   margin-right: 5px;
   margin-top: 0;
   margin-bottom: 0;
-  background-color: #f1f1f1;
+  background-color: #d6dae4;
 }
 
 .categories li:last-child {
@@ -137,6 +137,9 @@ article {
 
 .project {
   margin: 2.0rem 0;
+  padding: 2.0rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background-color: #eee;
 }
 
 /* Footer */
