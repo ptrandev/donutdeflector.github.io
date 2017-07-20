@@ -133,6 +133,12 @@ article {
   margin-right: 0;
 }
 
+/* Project */
+
+.project {
+  margin: 2.0rem 0;
+}
+
 /* Footer */
 
 footer {
