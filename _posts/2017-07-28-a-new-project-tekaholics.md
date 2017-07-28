@@ -8,6 +8,7 @@ tags: [jekyll, tekaholics, gulp, html, css]
 ---
 
 TEKaholics: A website dedicated to providing tech news, editorials, and reviews.
+
 It all started when a friend of mine, Traven, wanted to get back into blogging.
 Traven had a small following of readers on his blog "TheLastTechie." However,
 his last post, title "The Weak Case Against Strong Encryption" was on December 06,
