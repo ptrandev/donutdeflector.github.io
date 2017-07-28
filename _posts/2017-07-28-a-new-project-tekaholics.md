@@ -16,7 +16,7 @@ his last post, title "The Weak Case Against Strong Encryption" was on December 0
 
 Traven expressed his desire to get back into blogging to the staff team of his
 technology-based Discord server. I'm part of the staff team of course, how could
-it be otherwise.
+it be otherwise? :P
 
 Us staffers thought that starting a blog would be pretty great, so we got to work.
 First, of course was the name. Eventually, enough thinking (and a wee bit of
