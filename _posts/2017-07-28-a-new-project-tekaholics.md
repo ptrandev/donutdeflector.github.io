@@ -7,11 +7,11 @@ categories:
 tags: [jekyll, tekaholics, gulp, html, css]
 ---
 
-TEKaholics: A website dedicated to providing tech news, editorials, and reviews.
+**TEKaholics**: A website dedicated to providing tech news, editorials, and reviews.
 
 It all started when a friend of mine, Traven, wanted to get back into blogging.
-Traven had a small following of readers on his blog "TheLastTechie." However,
-his last post, title "The Weak Case Against Strong Encryption" was on December 06,
+Traven had a small following of readers on his blog `TheLastTechie`. However,
+his last post, title `The Weak Case Against Strong Encryption` was on December 06,
 2016.
 
 Traven expressed his desire to get back into blogging to the staff team of his
@@ -20,10 +20,10 @@ it be otherwise? :P
 
 Us staffers thought that starting a blog would be pretty great, so we got to work.
 First, of course was the name. Eventually, enough thinking (and a wee bit of
-circlejerking from my part) lead us from "Techaholics" to "TEKaholics." 50% more
-street cred comes from dropping the "ch" in favor of a "k."
+circlejerking from my part) lead us from `Techaholics` to `TEKaholics`. 50% more
+street cred comes from dropping the `ch` in favor of a `k`.
 
-Next, Traven gave us access to "TheLastTechie," which ran on..... Wordpress. We
+Next, Traven gave us access to `TheLastTechie`, which ran on..... Wordpress. We
 rebranded the webiste and gave it a nice dark theme. Perfect! Execpt for the
 Wordpress part.
 
