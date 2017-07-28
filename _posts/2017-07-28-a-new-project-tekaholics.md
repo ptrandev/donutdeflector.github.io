@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  A New Project: TEKaholics
+title:  "A New Project: TEKaholics"
 date:   2017-07-17
 categories:
  - web design
