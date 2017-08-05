@@ -21,9 +21,9 @@
     "gulp-clean-css": "^3.7.0",
     "gulp-imagemin": "^3.3.0",
     "gulp-shell": "^0.6.3",
-    "gulp-uncss": "^1.0.6"
+    "gulp-uncss": "^1.0.6",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngquant": "^5.0.1"
   },
-  "dependencies": {
-    "imagemin-mozjpeg": "^6.0.0"
-  }
+  "dependencies": {}
 }
