@@ -1,0 +1,12 @@
+---
+layout: default
+title: Categories
+---
+
+{% include blog-menu.html %}
+
+<dl>
+{% for category in site.categories %}
+  <dt><a href="/blog/categories/{{ category[0] | downcase }}/">{{ category[0] }}</a></dt>
+{% endfor %}
+</dl>

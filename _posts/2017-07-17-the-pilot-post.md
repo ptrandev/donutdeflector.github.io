@@ -2,7 +2,8 @@
 layout: post
 title:  The Pilot Post
 date:   2017-07-17
-categories: pilot website
+categories:
+- Meta
 tags: [pilot, website]
 ---
 
