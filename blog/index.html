@@ -8,7 +8,7 @@ categories: blog
 
 {% for post in site.posts limit:5 %}
   <article class="post card">
-    <h2 class="no-margin-bottom"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+    <h3 class="no-margin-bottom"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
       <span class="date">{{post.date | date: "%B %e, %Y"}}</span>
       <div class="entry">
         {{ post.excerpt }}
