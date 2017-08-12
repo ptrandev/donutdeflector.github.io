@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-12T16:35:42-04:00</updated><id>http://localhost:4000/</id><title type="html">donutdeflector.github.io</title><subtitle>Web Developer from Somewhere</subtitle><entry><title type="html">A New Project: TEKaholics</title><link href="http://localhost:4000/blog/2017/07/28/a-new-project-tekaholics/" rel="alternate" type="text/html" title="A New Project: TEKaholics" /><published>2017-07-28T00:00:00-04:00</published><updated>2017-07-28T00:00:00-04:00</updated><id>http://localhost:4000/blog/2017/07/28/a-new-project-tekaholics</id><content type="html" xml:base="http://localhost:4000/blog/2017/07/28/a-new-project-tekaholics/">&lt;p&gt;&lt;strong&gt;TEKaholics&lt;/strong&gt;: A website dedicated to providing tech news, editorials, and reviews.&lt;/p&gt;
+
+&lt;p&gt;It all started when a friend of mine, Traven, wanted to get back into blogging.
+Traven had a small following of readers on his blog &lt;strong&gt;TheLastTechie&lt;/strong&gt;. However,
+his last post, titled &lt;strong&gt;The Weak Case Against Strong Encryption&lt;/strong&gt; was on December 06,
+2016.&lt;/p&gt;
+
+&lt;p&gt;Traven expressed his desire to get back into blogging to the staff team of his
+technology-based Discord server. I’m part of the staff team of course, how could
+it be otherwise? :P&lt;/p&gt;
+
+&lt;p&gt;Us staffers thought that starting a blog would be pretty great, so we got to work.
+First, of course was the name. Eventually, enough thinking (and a wee bit of
+circlejerking from my part) lead us from &lt;strong&gt;Techaholics&lt;/strong&gt; to &lt;strong&gt;TEKaholics&lt;/strong&gt;. 50% more
+street cred comes from dropping the &lt;strong&gt;ch&lt;/strong&gt; in favor of a &lt;strong&gt;k&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next, Traven gave us access to &lt;strong&gt;TheLastTechie&lt;/strong&gt;, which ran on….. Wordpress. We
+rebranded the webiste and gave it a nice dark theme. Perfect! Execpt for the
+Wordpress part.&lt;/p&gt;
+
+&lt;p&gt;While Traven and a few staffers were playing modded Minecraft and hanging out
+on Discord, I brought up Jekyll. Traven decided to check it out and then asked
+me to migrate the Wordpress site to Jekyll.That totally caught me out in the blue.
+Traven HATES all things hipster! Anyhow, he provided me an &lt;strong&gt;.xml&lt;/strong&gt; of the Wordpress
+site and I got to work.&lt;/p&gt;
+
+&lt;p&gt;I used &lt;a href=&quot;http://www.jekyllnow.com/&quot;&gt;Jekyll Now&lt;/a&gt; as a base for the website
+and used &lt;a href=&quot;http://import.jekyllrb.com/docs/wordpressdotcom/&quot;&gt;this guide&lt;/a&gt; to
+import the Wordpress content to Jekyll.&lt;/p&gt;
+
+&lt;p&gt;I showed the makeshift blog to Traven and the other staffers, who were
+happy with the quick load time and simplicity. Nice.&lt;/p&gt;
+
+&lt;p&gt;That leads me to the present day, where I’m working on the layout and design
+of the blog. You can check out my progress on &lt;a href=&quot;https://tekaholics.github.io/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As of now, there’s lots to be done: comment system, author biograhpies, etc.
+I’m quite happy with progress so far.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="tekaholics" /><category term="gulp" /><category term="html" /><category term="css" /><summary type="html">TEKaholics: A website dedicated to providing tech news, editorials, and reviews.</summary></entry><entry><title type="html">The Pilot Post</title><link href="http://localhost:4000/blog/2017/07/17/the-pilot-post/" rel="alternate" type="text/html" title="The Pilot Post" /><published>2017-07-17T00:00:00-04:00</published><updated>2017-07-17T00:00:00-04:00</updated><id>http://localhost:4000/blog/2017/07/17/the-pilot-post</id><content type="html" xml:base="http://localhost:4000/blog/2017/07/17/the-pilot-post/">&lt;p&gt;Hello and welcome to the beginning of my blog. I’ll be talking mainly about
+things in my life or issues I would like to talk about. Sometimes I’ll throw
+in a few blog posts about web design or whatever.&lt;/p&gt;
+
+&lt;p&gt;There are still a few things that I’ll have to implement on the website:
+commenting, a contact form, etc. Still, I’m sure that I’ll still be able to
+talk about things in the mean time without much trouble.&lt;/p&gt;</content><author><name></name></author><category term="pilot" /><category term="website" /><summary type="html">Hello and welcome to the beginning of my blog. I’ll be talking mainly about things in my life or issues I would like to talk about. Sometimes I’ll throw in a few blog posts about web design or whatever.</summary></entry></feed>

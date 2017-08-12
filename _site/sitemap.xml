@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/blog/2017/07/17/the-pilot-post/</loc>
+<lastmod>2017-07-17T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/2017/07/28/a-new-project-tekaholics/</loc>
+<lastmod>2017-07-28T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/archive/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/blog/categories/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/projects/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/blog/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/blog/categories/meta/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/blog/categories/web-design/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/google99d8807ab5641e2c.html</loc>
+<lastmod>2017-03-08T22:05:23-05:00</lastmod>
+</url>
+</urlset>

@@ -29,12 +29,16 @@
 
     <hr>
 
+    {% include blog-menu.html %}
+
+  <dl>
     {% for post in site.posts %}
     {% if post.categories contains page.title %}
     <dt>{{post.date | date: "%B %e, %Y"}}</dt>
       <dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
     {% endif %}
     {% endfor %}
+  </dl>
 
     <hr>
     </main>
