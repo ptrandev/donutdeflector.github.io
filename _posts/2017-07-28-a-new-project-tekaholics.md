@@ -15,7 +15,7 @@ his last post, titled **The Weak Case Against Strong Encryption** was on Decembe
 2016.
 
 Traven expressed his desire to get back into blogging to the staff team of his
-technology-based Discord server. I'm part of the staff team of course, how could
+technology-based Discord server. I'm part of the staff team of course. How could
 it be otherwise? :P
 
 Us staffers thought that starting a blog would be pretty great, so we got to work.
