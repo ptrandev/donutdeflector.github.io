@@ -1,0 +1,87 @@
+h1 {
+  font-size: 36px;
+  text-align: center;
+  font-family: "Helvetica", "Arial", "San Fransisco", sans-serif;
+}
+
+.white {
+  color: #eaeff2;
+}
+
+.black {
+  color: #212121;
+}
+
+#orb {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  padding: 20px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.sun {
+  background-color: #ffdd00;
+  border: 10px solid #f1c40f;
+  transition: ease 0.3s;
+}
+
+.sun:hover {
+  border: 20px solid #f1c40f;
+}
+
+.moon {
+  background-color: #bdc3c7;
+  border: 10px solid #eaeff2;
+  transition: ease 0.3s;
+}
+
+.moon:hover {
+  border: 20px solid #eaeff2;
+}
+
+#moonspot1 {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  float:right;
+  margin: 20px;
+  transition: ease 0.3s;
+}
+
+#moonspot2 {
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  float:right;
+  margin: 20px;
+  transition: ease 0.3s;
+}
+
+#moonspot3 {
+  height: 180px;
+  width: 180px;
+  border-radius: 100%;
+  float:right;
+  margin: 20px;
+  transition: ease 0.3s;
+}
+
+.visible {
+  background-color: #eaeff2;
+
+}
+
+#sky {
+  transition: ease 0.3s;
+}
+
+.night {
+  background-color: #2c3e50;
+}
+
+.day {
+  background-color: #37d8e6;
+}
