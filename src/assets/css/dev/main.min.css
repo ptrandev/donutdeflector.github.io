@@ -4182,6 +4182,8 @@ code {
   font-weight: 700;
 }
 
+/* Cards */
+
 .card {
   margin: 2.0rem 0;
   padding: 2.0rem;
@@ -4304,7 +4306,22 @@ article {
   margin-right: 0;
 }
 
-/* Project */
+/* Pagination */
+
+.pagination {
+  display: inline-block;
+}
+
+.previous {
+  margin-right: 5px;
+}
+
+.page_number {
+  background-color: #eee;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding: 1px 5px;
+  display: inline-block;
+}
 
 /* Footer */
 

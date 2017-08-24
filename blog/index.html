@@ -2,11 +2,13 @@
 layout: default
 title: Blog
 categories: blog
+pagination:
+  enabled: true
 ---
 
 {% include blog-menu.html %}
 
-{% for post in site.posts limit:5 %}
+{% for post in paginator.posts %}
   <article class="post card">
     <h3 class="no-margin-bottom"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
       <span class="date">{{post.date | date: "%B %e, %Y"}}</span>
@@ -18,3 +20,19 @@ categories: blog
       {% endfor %}
   </article>
 {% endfor %}
+
+<div class="pure-u-1-1 l-box is-center">
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">Back</a>
+    {% else %}
+      <span class="previous">Back</span>
+    {% endif %}
+    <span class="page_number">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    {% else %}
+    <span class="next">Next</span>
+    {% endif %}
+  </div>
+</div>

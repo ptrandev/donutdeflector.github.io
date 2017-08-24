@@ -7,6 +7,6 @@ title: Categories
 
 <dl>
 {% for category in site.categories %}
-  <dt><a href="/blog/categories/{{ category[0] | downcase }}/">{{ category[0] }}</a></dt>
+  <dt><a href="/blog/categories/{{ category[0] | downcase }}/">{{ category[0] | upcase }}</a></dt>
 {% endfor %}
 </dl>
