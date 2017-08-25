@@ -1,0 +1,10 @@
+body {
+  background-color: #333;
+}
+
+#clock {
+  font-family: "Courier", monospace;
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 100px;
+}
