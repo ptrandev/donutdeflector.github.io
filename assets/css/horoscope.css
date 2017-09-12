@@ -1,9 +1,9 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0;
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 0 10px;
   box-sizing: border-box; }
 .column,
 .columns {
@@ -21,14 +21,39 @@
     width: 90%; }
 }
 
+.center {
+  text-align: center;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+.pure-g {
+  letter-spacing: normal;
+  text-rendering: optimizeLegibility;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+hr {
+  width: 50%;
+}
+
 #answers {
-  max-width: 500px;
-  height: 3.2rem;
-  font-size: 3.2rem;
+  width: 90%;
+  max-width: 400px;
+  height: 2.8rem;
+  font-size: 2rem;
   margin: auto;
   background: transparent;
   border: none;
   border-bottom: 2px solid #2CC55D;
+  color: #50596c;
   display: block;
 }
 
