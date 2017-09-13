@@ -20,14 +20,38 @@ jQuery(function () {
 
   // Birth Month Function
   const birthMonth = () => {
-    month = document.getElementById('answers').value.toLowerCase();
+    // Yes, this line exists.
+    month = document.getElementById('answers').value.charAt(0).toUpperCase() +
+    document.getElementById('answers').value.slice(1).toLowerCase();
     return month;
   }
 
   // Birth Day Function
   const birthDay = () => {
-    day = document.getElementById('answers').value.toLowerCase();
+    day = document.getElementById('answers').value;
     return day;
+  }
+
+  // Confirmation Function
+  const userConfirmation = () => {
+    confirmation = document.getElementById('answers').value.toLowerCase();
+    if (confirmation === "no") {
+      questionNumber = 0;
+      return questionNumber;
+    }
+  }
+
+  // Store Le Variables Function
+  const variableStorer = () => {
+    if (questionNumber === 1) {
+      birthMonth();
+    }
+    if (questionNumber === 2) {
+      birthDay();
+    }
+    if (questionNumber === 3) {
+      userConfirmation();
+    }
   }
 
   // Display Question Function
@@ -45,8 +69,11 @@ jQuery(function () {
 
   $('#answers').keydown(function (e) {
       if (e.which == 13) {
-        console.log(birthMonth());
         console.log(questionNumerator());
+        console.log(variableStorer());
+
+        document.getElementById('answers').value = null;
+
         displayQuestion();
       }
   });
