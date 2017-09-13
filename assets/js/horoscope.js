@@ -41,6 +41,39 @@ jQuery(function () {
     }
   }
 
+  // Horoscope and Options Function
+  const horoscopeOptions = () => {
+    if (month === "January") {
+
+    } else if (month === "February") {
+
+    } else if (month === "March") {
+
+    } else if (month === "April") {
+
+    } else if (month === "May") {
+
+    } else if (month === "June") {
+
+    } else if (month === "July") {
+
+    } else if (month === "August") {
+
+    } else if (month === "September") {
+
+    } else if (month === "October") {
+
+    } else if (month === "November") {
+
+    } else if (month === "December") {
+
+    } else {
+      document.getElementById('question').innerHTML = "Invalid date!";
+      questionNumber = 0;
+      return questionNumber;
+    }
+  }
+
   // Store Le Variables Function
   const variableStorer = () => {
     if (questionNumber === 1) {
@@ -51,6 +84,9 @@ jQuery(function () {
     }
     if (questionNumber === 3) {
       userConfirmation();
+      horoscopeOptions();
+    }
+    if (questionNumber === 4) {
     }
   }
 
@@ -62,6 +98,8 @@ jQuery(function () {
       document.getElementById('question').innerHTML = "What day were you born in?";
     } else if (questionNumber === 2) {
       document.getElementById('question').innerHTML = `You were born ${month} ${day}, right?`;
+    } else if (questionNumber === 3) {
+      document.getElementById('question').innerHTML = `You are ${aoran} ${horoscope}.`;
     } else {
       document.getElementById('question').innerHTML = "null";
     }
