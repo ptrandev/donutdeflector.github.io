@@ -44,33 +44,139 @@ jQuery(function () {
   // Horoscope and Options Function
   const horoscopeOptions = () => {
     if (month === "January") {
-
+      if (day >= 1 && day <= 19) {
+        horoscope = "Capricorn";
+        return horoscope;
+      }
+      if (day >= 20 && day <= 31) {
+        horoscope = "Aquarius";
+        return horoscope;
+      }
     } else if (month === "February") {
-
+      if (day >= 1 && day <= 18) {
+        horoscope = "Aquarius";
+        return horoscope;
+      }
+      if (day >= 19 && day <= 28) {
+        horoscope = "Pisces";
+        return horoscope;
+      }
     } else if (month === "March") {
-
+      if (day >= 1 && day <= 20) {
+        horoscope = "Pisces";
+        return horoscope;
+      }
+      if (day >= 21 && day <= 31) {
+        horoscope = "Aries";
+        return horoscope;
+      }
     } else if (month === "April") {
-
+      if (day >= 1 && day <= 19) {
+        horoscope = "Aries";
+        return horoscope;
+      }
+      if (day >= 20 && day <= 30) {
+        horoscope = "Taurus";
+        return horoscope;
+      }
     } else if (month === "May") {
-
+      if (day >= 1 && day <= 20) {
+        horoscope = "Taurus";
+        return horoscope;
+      }
+      if (day >= 21 && day <= 31) {
+        horoscope = "Gemini";
+        return horoscope;
+      }
     } else if (month === "June") {
-
+      if (day >= 1 && day <= 21) {
+        horoscope = "Gemini";
+        return horoscope;
+      }
+      if (day >= 22 && day <= 30) {
+        horoscope = "Cancer";
+        return horoscope;
+      }
     } else if (month === "July") {
-
+      if (day >= 1 && day <= 22) {
+        horoscope = "Cancer";
+        return horoscope;
+      }
+      if (day >= 23 && day <= 31) {
+        horoscope = "Leo";
+        return horoscope;
+      }
     } else if (month === "August") {
-
+      if (day >= 1 && day <= 22) {
+        horoscope = "Leo";
+        return horoscope;
+      }
+      if (day >= 23 && day <= 31) {
+        horoscope = "Virgo";
+        return horoscope;
+      }
     } else if (month === "September") {
-
+      if (day >= 1 && day <= 22) {
+        horoscope = "Virgo";
+        return horoscope;
+      }
+      if (day >= 23 && day <= 30) {
+        horoscope = "Libra";
+        return horoscope;
+      }
     } else if (month === "October") {
-
+      if (day >= 1 && day <= 22) {
+        horoscope = "Libra";
+        return horoscope;
+      }
+      if (day >= 23 && day <= 31) {
+        horoscope = "Scorpio";
+        return horoscope;
+      }
     } else if (month === "November") {
-
+      if (day >= 1 && day <= 21) {
+        horoscope = "Scorpio";
+        return horoscope;
+      }
+      if (day >= 22 && day <= 30) {
+        horoscope = "Sagittarius";
+        return horoscope;
+      }
     } else if (month === "December") {
-
+      if (day >= 1 && day <= 21) {
+        horoscope = "Sagittarius";
+        return horoscope;
+      }
+      if (day >= 22 && day <= 31) {
+        horoscope = "Aquarius";
+        return horoscope;
+      }
     } else {
-      document.getElementById('question').innerHTML = "Invalid date!";
       questionNumber = 0;
-      return questionNumber;
+      displayQuestion();
+    }
+  }
+
+  // A or An Function
+  const useAorAn = () => {
+    if (horoscope === "Aries" || horoscope === "Aquarius") {
+      aoran = "an";
+      return aoran;
+    } else {
+      aoran = "a";
+      return aoran;
+    }
+  }
+
+  // Display Horoscope Information
+  const horoscopeInformation = () => {
+    if (horoscope === "Aries") {
+      document.getElementById('element').innerHTML = "Fire";
+      document.getElementById('lucky-numbers').innerHTML = "1, 8, 17";
+      document.getElementById('strengths').innerHTML = "Courage, Confidence, Determination, Enthusiasm, Optimism, Honesty, Passion";
+      document.getElementById('weaknesses').innerHTML = "Impatience, Moodiness, Short-Tempered, Impulsiveness, and Agressiveness";
+      document.getElementById('likes').innerHTML = "Comfy Clothes, Being in Charge, Pysical Challenges, and Individual Sports";
+      document.getElementById('dislikes').innerHTML = "Inactivity, Delays, and Work That Doesn't Use Your Talents";
     }
   }
 
@@ -85,8 +191,10 @@ jQuery(function () {
     if (questionNumber === 3) {
       userConfirmation();
       horoscopeOptions();
-    }
-    if (questionNumber === 4) {
+      useAorAn();
+      horoscopeInformation();
+      $("#answers").fadeOut(400);
+      $(".horoscope-information").delay(400).fadeIn(400);
     }
   }
 
@@ -97,14 +205,15 @@ jQuery(function () {
     } else if (questionNumber === 1) {
       document.getElementById('question').innerHTML = "What day were you born in?";
     } else if (questionNumber === 2) {
-      document.getElementById('question').innerHTML = `You were born ${month} ${day}, right?`;
+      document.getElementById('question').innerHTML = `You were born <span class="bold">${month}  ${day}</span>, right?`;
     } else if (questionNumber === 3) {
-      document.getElementById('question').innerHTML = `You are ${aoran} ${horoscope}.`;
+      document.getElementById('question').innerHTML = `You are ${aoran} <span class="bold" id="horoscope-name">${horoscope}</span>. Check below for more information!`;
     } else {
       document.getElementById('question').innerHTML = "null";
     }
   }
 
+  // Runs Functions on Enter
   $('#answers').keydown(function (e) {
       if (e.which == 13) {
         console.log(questionNumerator());
@@ -116,5 +225,6 @@ jQuery(function () {
       }
   });
 
+  // Display First Question
   displayQuestion();
 });
