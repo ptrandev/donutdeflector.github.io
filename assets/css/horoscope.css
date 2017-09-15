@@ -1,7 +1,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 550px;
   margin: 10px auto;
   padding: 0 10px;
   box-sizing: border-box; }
@@ -25,8 +25,13 @@
   text-align: center;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 body {
   background-color: #f1f1f1;
+  text-align: center;
 }
 
 .pure-g {
@@ -36,19 +41,33 @@ body {
 }
 
 h1 {
-  font-size: 2.8rem;
+  font-size: 50px;
   font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 24px;
 }
 
 hr {
   width: 50%;
 }
 
+#question {
+  font-size: 36px;
+}
+
 #answers {
   width: 90%;
   max-width: 400px;
-  height: 2.8rem;
-  font-size: 2rem;
+  height: 48px;
+  font-size: 36px;
   margin: auto;
   background: transparent;
   border: none;
@@ -59,4 +78,8 @@ hr {
 
 #answers:focus {
   outline-width: 0;
+}
+
+.horoscope-information {
+  display: none;
 }
