@@ -1,7 +1,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 550px;
+  max-width: 600px;
   margin: 10px auto;
   padding: 0 10px;
   box-sizing: border-box; }
@@ -29,8 +29,14 @@
   font-weight: 700;
 }
 
+.btn {
+  font-size: 24px;
+  height: auto;
+  padding: 10px;
+}
+
 body {
-  background-color: #f1f1f1;
+  background-color: #eee;
   text-align: center;
 }
 
@@ -71,7 +77,7 @@ hr {
   margin: auto;
   background: transparent;
   border: none;
-  border-bottom: 2px solid #2CC55D;
+  border-bottom: 2px solid #5764c6;
   color: #50596c;
   display: block;
 }
