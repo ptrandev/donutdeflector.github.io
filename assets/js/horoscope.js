@@ -16,7 +16,7 @@ jQuery(function () {
   const questionNumerator = () => {
     questionNumber = questionNumber + 1;
     return questionNumber;
-  }
+  };
 
   // Birth Month Function
   const birthMonth = () => {
@@ -24,13 +24,13 @@ jQuery(function () {
     month = document.getElementById('answers').value.charAt(0).toUpperCase() +
     document.getElementById('answers').value.slice(1).toLowerCase();
     return month;
-  }
+  };
 
   // Birth Day Function
   const birthDay = () => {
     day = document.getElementById('answers').value;
     return day;
-  }
+  };
 
   // conformation Function
   const userconformation = () => {
@@ -46,7 +46,7 @@ jQuery(function () {
       $("#answers").fadeOut(400);
       $(".horoscope-information").delay(400).fadeIn(400);
     }
-  }
+  };
 
   // Horoscope and Options Function
   const horoscopeOptions = () => {
@@ -150,7 +150,7 @@ jQuery(function () {
       questionNumber = 0;
       displayQuestion();
     }
-  }
+  };
 
   // A or An Function
   const useAorAn = () => {
@@ -161,7 +161,7 @@ jQuery(function () {
       aoran = "a";
       return aoran;
     }
-  }
+  };
 
   // Display Horoscope Information
   const horoscopeInformation = () => {
@@ -250,7 +250,7 @@ jQuery(function () {
       document.getElementById('likes').innerHTML = "Being Alone, Sleeping, Music, Romance, Visual Media, Swimming, and Spirituality";
       document.getElementById('dislikes').innerHTML = "Know-It-Alls, Criticism, Living in the Past, and Cruelty";
     }
-  }
+  };
 
   // Store Le Variables Function
   const variableStorer = () => {
@@ -261,7 +261,7 @@ jQuery(function () {
     } else if (questionNumber === 3) {
       userconformation();
     }
-  }
+  };
 
   // Display Question Function
   const displayQuestion = () => {
@@ -270,13 +270,13 @@ jQuery(function () {
     } else if (questionNumber === 1) {
       document.getElementById('question').innerHTML = "What day were you born in?";
     } else if (questionNumber === 2) {
-      document.getElementById('question').innerHTML = `You were born <span class="bold"> ${month} ${day}</span>, right?`;
+      document.getElementById('question').innerHTML = "You were born <span class='word-block bold'>" + month + " " + day + "</span>, right?";
     } else if (questionNumber === 3) {
-      document.getElementById('question').innerHTML = `You are ${aoran} <span class="bold" id="horoscope-name"> ${horoscope}</span>. Check below for more information!`;
+      document.getElementById('question').innerHTML = "You are " + aoran + " <span class='word-block bold' id='horoscope-name'>" + horoscope + "</span>. Check below for more information!";
     } else {
       document.getElementById('question').innerHTML = "null";
     }
-  }
+  };
 
   // Runs Functions on Enter
   $('#answers').keydown(function(e) {
@@ -297,7 +297,7 @@ jQuery(function () {
     questionNumber = 0;
 
     displayQuestion();
-  })
+  });
 
   // Display First Question
   displayQuestion();
