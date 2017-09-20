@@ -1,3 +1,4 @@
+
 .container {
   position: relative;
   width: 100%;
@@ -33,6 +34,11 @@
   font-size: 24px;
   height: auto;
   padding: 10px;
+}
+
+.word-block {
+  background-color: #fff;
+  padding: 2px 5px;
 }
 
 body {
