@@ -11,6 +11,9 @@ jQuery(function () {
 
   // Global Variables
   let questionNumber = 0;
+  let month = null;
+  let day = null;
+  let horoscope = null;
   let validHoroscope = true;
 
   // Question Numerator Function
@@ -51,6 +54,8 @@ jQuery(function () {
       } else {
         questionNumber = 0;
         return questionNumber;
+
+        displayQuestion();
       }
     }
   };
@@ -156,9 +161,6 @@ jQuery(function () {
     } else {
       validHoroscope = false;
       return validHoroscope;
-
-      questionNumber = 0;
-      displayQuestion();
     }
   };
 
