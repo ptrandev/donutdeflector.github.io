@@ -62,6 +62,8 @@ jQuery(function () {
 
   // Horoscope and Options Function
   const horoscopeOptions = () => {
+    validHoroscope = true;
+
     if (month === "January") {
       if (day >= 1 && day <= 19) {
         horoscope = "Capricorn";
