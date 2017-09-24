@@ -11,6 +11,7 @@ jQuery(function () {
 
   // Global Variables
   let questionNumber = 0;
+  let validHoroscope = true;
 
   // Question Numerator Function
   const questionNumerator = () => {
@@ -32,19 +33,25 @@ jQuery(function () {
     return day;
   };
 
-  // conformation Function
-  const userconformation = () => {
-    conformation = document.getElementById('answers').value.toLowerCase();
+  // Confirmation Function
+  const userconfirmation = () => {
+    confirmation = document.getElementById('answers').value.toLowerCase();
 
-    if (conformation === "no" || conformation === "no." || conformation === "n") {
+    if (confirmation === "no" || confirmation === "no." || confirmation === "n") {
       questionNumber = 0;
       return questionNumber;
     } else {
       horoscopeOptions();
       useAorAn();
+
+      if (validHoroscope === true) {
       horoscopeInformation();
       $("#answers").fadeOut(400);
       $(".horoscope-information").delay(400).fadeIn(400);
+      } else {
+        questionNumber = 0;
+        return questionNumber;
+      }
     }
   };
 
@@ -147,6 +154,9 @@ jQuery(function () {
         return horoscope;
       }
     } else {
+      validHoroscope = false;
+      return validHoroscope;
+
       questionNumber = 0;
       displayQuestion();
     }
@@ -259,7 +269,7 @@ jQuery(function () {
     } else if (questionNumber === 2) {
       birthDay();
     } else if (questionNumber === 3) {
-      userconformation();
+      userconfirmation();
     }
   };
 
@@ -274,7 +284,7 @@ jQuery(function () {
     } else if (questionNumber === 3) {
       document.getElementById('question').innerHTML = "You are " + aoran + " <span class='word-block bold' id='horoscope-name'>" + horoscope + "</span>. Check below for more information!";
     } else {
-      document.getElementById('question').innerHTML = "null";
+      document.getElementById('question').innerHTML = "ERROR: Reload the page.";
     }
   };
 
@@ -290,11 +300,15 @@ jQuery(function () {
       }
   });
 
+  // Restart Horoscope Generator
   $('#restart').click(function() {
     $(".horoscope-information").fadeOut(400);
     $("#answers").delay(400).fadeIn(400);
 
     questionNumber = 0;
+    horoscope = null;
+    month = null;
+    day = null;
 
     displayQuestion();
   });
