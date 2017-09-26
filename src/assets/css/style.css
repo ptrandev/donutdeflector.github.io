@@ -58,6 +58,14 @@
   font-weight: 700;
 }
 
+.l-box {
+  padding: 10px;
+}
+
+.pure-g [class*=pure-u] {
+  font-family: "Rubik", sans-serif;
+}
+
 /* Cards */
 
 .card {
@@ -107,7 +115,7 @@ nav li:last-child {
 .profile-picture {
   border: 1px solid #D6DAE4;
   border-radius: 25%;
-  margin: auto;
+  margin: 0 auto;
   max-width: 200px;
 }
 

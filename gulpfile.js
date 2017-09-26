@@ -4,6 +4,7 @@ var unCSS = require('gulp-uncss');
 var cleanCSS = require('gulp-clean-css');
 var imagemin = require('gulp-imagemin'); 
 var mozjpeg  = require('imagemin-mozjpeg');
+var pngquant  = require('imagemin-pngquant');
 
 gulp.task('concat', function() {
     gulp.src(['src/assets/css/*.css'])
@@ -19,6 +20,10 @@ gulp.task('css', function() {
 });
 
 gulp.task('img', function() {
+    gulp.src(['src/assets/images/*.png'])
+        .pipe(imagemin([pngquant({quality: 0-72})]))
+        .pipe(gulp.dest('assets/images'));
+
     gulp.src(['src/assets/images/*.jpg'])
         .pipe(imagemin([mozjpeg({progressive: true, quality: 80})]))
         .pipe(imagemin({progressive: true}))
