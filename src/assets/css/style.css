@@ -3,7 +3,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 768px;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box; }
@@ -84,6 +84,22 @@
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
+/* Luxbar */
+
+.luxbar-brand:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.luxbar-item {
+  transition: all 0.3s ease;
+}
+
+.luxbar-item a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* Navigation */
 
 nav {
@@ -134,6 +150,52 @@ nav li:last-child {
 header h1 {
   margin: 0 0 1.5rem;
 }
+
+/* Hero */
+
+.hero-wrapper {
+  background-color: #212121;
+  color: #d6dae4;
+  text-align: center;
+  height: 300px;
+  margin-top: 56px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.hero {
+  position: relative;
+  top: 50%;
+  margin: auto;
+  transform: translateY(-50%);
+  padding: 10px;
+  width: 100%;
+  max-width: 415px;
+}
+
+.hero hr {
+  border-bottom: 1px #d6dae4 solid;
+  margin-bottom: 2rem;
+  width: 100px;
+}
+
+.hero p {
+  font-size: 1.8rem;
+}
+
+.hero h1 {
+  font-size: 6rem;
+}
+
+@media (max-width: 425px) {
+  .hero p {
+    font-size: 1.6rem;
+  }
+
+  .hero h1 {
+    font-size: 5rem;
+  }
+}
+
 
 /* Article */
 

@@ -480,7 +480,7 @@ ol ol {
 }
 ul li,
 ol li {
-  margin-top: 1rem;
+  margin-top: 0;
 }
 ul {
   list-style: disc inside;

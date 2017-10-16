@@ -16,22 +16,29 @@
   </head>
 
   <body>
-<div class="container">
 
-<div class="pure-g">
-
-  <div class="pure-u-1-1 pure-u-lg-1-4 l-box">
     {% include nav.html %}
-  </div>
-  <div class="pure-u-1-1 pure-u-lg-3-4 l-box">
-    <main>
-      <header>
+
+    <div class="hero-wrapper">
+      <div class="hero">
         <h1>{{ page.title }}</h1>
-      </header>
+        <hr>
+        <p>{% if page.title == "Home" %} I'm a high school student who loves web development and Linux.
+           {% elsif page.title == "Blog" %} A place to write about my musings.
+           {% elsif page.title == "Categories" %} Blog posts sorted by topic.
+           {% elsif page.title == "Archive" %} A list of all blog posts written.
+           {% else page.title == "Projects" %} Things I've made in the past.
+           {% endif %}
+        </p>
+      </div>
+    </div>
 
-    <hr>
+<div class="container">
+<div class="pure-g">
+  <div class="pure-u-1-1 l-box">
+    <main>
 
-        {{ content }}
+      {{ content }}
 
     <hr>
     </main>
