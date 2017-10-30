@@ -5,28 +5,37 @@ categories: blog
 pagination:
   enabled: true
 ---
+<div class="blog-wrapper">
+  <div class="ribbon-purple-top"></div>
+  <div class="ribbon-purple">
+    <div class="blog">
 
 {% include blog-menu.html %}
-
+  <div class="pure-g">
 {% for post in paginator.posts %}
+  <div class="pure-u-1-1 pure-u-md-1-2 l-box">
   <article class="post card">
+    <div class="categories">
+    {% for categories in post.categories %}
+<span><a class="post-category" href="/blog/categories/{{categories | downcase}}">{{categories}}</a></span>
+    {% endfor %}
+    </div>
     <h3 class="no-margin-bottom"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
       <span class="date">{{post.date | date: "%B %e, %Y"}}</span>
       <div class="entry">
         {{ post.excerpt }}
       </div>
-      {% for categories in post.categories %}
-<span><a class="post-category" href="/blog/categories/{{categories | downcase}}">{{categories}}</a></span>
-      {% endfor %}
+    </div>
   </article>
 {% endfor %}
+  </div>
 
 <div class="pure-u-1-1 l-box is-center">
   <div class="pagination">
     {% if paginator.previous_page %}
       <a href="{{ paginator.previous_page_path }}" class="previous">Back</a>
     {% else %}
-      <span class="previous">Back</span>
+      <span class="back">Back</span>
     {% endif %}
     <span class="page_number">{{ paginator.page }} of {{ paginator.total_pages }}</span>
     {% if paginator.next_page %}
@@ -35,4 +44,8 @@ pagination:
     <span class="next">Next</span>
     {% endif %}
   </div>
+</div>
+</div>
+</div>
+<div class="ribbon-purple-bottom"></div>
 </div>
