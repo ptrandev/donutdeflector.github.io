@@ -1,11 +1,22 @@
+/* Background */
+
+.background-overlay {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(21, 21, 21, 0.6);
+}
+
 /* Container */
 
 .container {
   position: relative;
   width: 100%;
   margin: 0 auto;
+  margin-top: 56px;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 .column,
 .columns {
   width: 100%;
@@ -34,6 +45,8 @@
   url("/assets/fonts/Rubik-Bold.woff"),
   url("/assets/fonts/Rubik-Bold.ttf");
 }
+
+/* Misc */
 
 .is-center {
   text-align: center;
@@ -86,7 +99,7 @@
 .card:active,
 .card.active {
   background-color: #fff;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);  
 }
 
 @media (min-width: 768px) {
@@ -111,14 +124,19 @@
   text-decoration: none;
 }
 
+/* Header */
+
+.header {
+  vertical-align: middle;
+}
+
 /* Hero */
 
 .hero-wrapper {
   position: relative;
-  background-color: #212121;
+  background-color: transparent;
   color: #eee;
   height: 400px;
-  margin-top: 56px;
   z-index: 1;
 }
 
@@ -179,6 +197,8 @@
   border-bottom: 50px solid transparent;
   border-right: 100vw solid #4352c6;
 }
+
+/* Grey Ribbon */
 
 .ribbon-grey {
   height: 100%;
@@ -345,14 +365,9 @@
 /* Footer */
 
 .footer-wrapper {
-  background-color: #212121;
+  background-color: transparent;
   color: #eee;
   margin-top: -50px;
-}
-
-.footer-home {
-  background-color: #4352c6;
-  color: #eee;
 }
 
 footer {

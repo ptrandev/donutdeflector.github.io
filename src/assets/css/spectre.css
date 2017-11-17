@@ -392,8 +392,14 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 body {
-  background: #d6dae4;
-  color: #50596c;
+  position: relative;  
+  background: url(/assets/images/thinkpad-keyboard.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #d6dae4;
   font-family: "Rubik", sans-serif;
   font-size: 1.8rem;
   overflow-x: hidden;
@@ -594,7 +600,7 @@ abbr[title] {
   appearance: none;
   background: #eee;
   border: .1rem solid #5764c6;
-  border-radius: .5rem;
+  border-radius: 0;
   color: #5764c6;
   cursor: pointer;
   display: inline-block;
@@ -613,10 +619,11 @@ abbr[title] {
   vertical-align: middle;
   white-space: nowrap;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s ease;
 }
 .btn:focus {
   background: #fbfbfe;
-  box-shadow: 0 0 0 .2rem rgba(87, 100, 198, .15);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   text-decoration: none;
 }
 .btn:hover {

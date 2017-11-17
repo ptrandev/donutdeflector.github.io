@@ -689,8 +689,14 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 body {
-  background: #d6dae4;
-  color: #50596c;
+  position: relative;  
+  background: url(/assets/images/thinkpad-keyboard.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #d6dae4;
   font-family: "Rubik", sans-serif;
   font-size: 1.8rem;
   overflow-x: hidden;
@@ -891,7 +897,7 @@ abbr[title] {
   appearance: none;
   background: #eee;
   border: .1rem solid #5764c6;
-  border-radius: .5rem;
+  border-radius: 0;
   color: #5764c6;
   cursor: pointer;
   display: inline-block;
@@ -910,10 +916,11 @@ abbr[title] {
   vertical-align: middle;
   white-space: nowrap;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s ease;
 }
 .btn:focus {
   background: #fbfbfe;
-  box-shadow: 0 0 0 .2rem rgba(87, 100, 198, .15);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   text-decoration: none;
 }
 .btn:hover {
@@ -3284,14 +3291,25 @@ code {
 .circle {
   border-radius: 50%;
 }
+/* Background */
+
+.background-overlay {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(21, 21, 21, 0.6);
+}
+
 /* Container */
 
 .container {
   position: relative;
   width: 100%;
   margin: 0 auto;
+  margin-top: 56px;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 .column,
 .columns {
   width: 100%;
@@ -3320,6 +3338,8 @@ code {
   url("/assets/fonts/Rubik-Bold.woff"),
   url("/assets/fonts/Rubik-Bold.ttf");
 }
+
+/* Misc */
 
 .is-center {
   text-align: center;
@@ -3372,7 +3392,7 @@ code {
 .card:active,
 .card.active {
   background-color: #fff;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);  
 }
 
 @media (min-width: 768px) {
@@ -3397,14 +3417,19 @@ code {
   text-decoration: none;
 }
 
+/* Header */
+
+.header {
+  vertical-align: middle;
+}
+
 /* Hero */
 
 .hero-wrapper {
   position: relative;
-  background-color: #212121;
+  background-color: transparent;
   color: #eee;
   height: 400px;
-  margin-top: 56px;
   z-index: 1;
 }
 
@@ -3465,6 +3490,8 @@ code {
   border-bottom: 50px solid transparent;
   border-right: 100vw solid #4352c6;
 }
+
+/* Grey Ribbon */
 
 .ribbon-grey {
   height: 100%;
@@ -3631,14 +3658,9 @@ code {
 /* Footer */
 
 .footer-wrapper {
-  background-color: #212121;
+  background-color: transparent;
   color: #eee;
   margin-top: -50px;
-}
-
-.footer-home {
-  background-color: #4352c6;
-  color: #eee;
 }
 
 footer {
