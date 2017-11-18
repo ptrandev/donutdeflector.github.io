@@ -1,10 +1,13 @@
 /* Background */
 
 .background-overlay {
-  position: relative;
-  height: 100vh;
+  position: fixed;
+  height: 100%;
   width: 100%;
+  margin: auto;
+  padding: 0;
   background-color: rgba(21, 21, 21, 0.6);
+  z-index: 1;
 }
 
 /* Container */
@@ -12,10 +15,12 @@
 .container {
   position: relative;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   margin-top: 56px;
   padding: 0;
   box-sizing: border-box;
+  z-index: 10;
 }
 .column,
 .columns {
@@ -79,6 +84,13 @@
 
 .pure-g [class*=pure-u] {
   font-family: "Rubik", sans-serif;
+}
+
+.bottom-anchor {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0; 
 }
 
 /* Cards */
@@ -172,7 +184,6 @@
   }
 }
 
-
 /* Purple Ribbon */
 
 .ribbon-purple {
@@ -214,6 +225,61 @@
   margin: auto;
   border-bottom: 50px solid transparent;
   border-right: 100vw solid #212121;
+}
+
+/* About */
+
+.about-wrapper {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 56px) !important;
+  text-align: center;
+  margin: auto;
+}
+
+.about {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 960px;
+  margin: auto;
+  margin-top: -56px;
+}
+
+.about h1 {
+  font-size: 3.6rem;
+}
+
+.about p {
+  font-size: 1.8rem;
+}
+
+@media (min-width: 500px) {
+  .about h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about h1 {
+    font-size: 7rem;
+  }
+
+  .about p {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about h1 {
+    font-size: 8rem;
+  }
+
+  .about p {
+    font-size: 2.6rem;
+  }
 }
 
 /* Blog */
