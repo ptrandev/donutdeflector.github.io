@@ -3,7 +3,7 @@ layout: post
 title:  "A New Project: TEKaholics"
 date:   2017-07-28
 categories:
-- Web-Design
+- Design
 tags: [jekyll, tekaholics, gulp, html, css]
 ---
 

@@ -11,11 +11,11 @@ title: Categories
 <div class="pure-g">
   <div class="pure-u-1-1 l-box">
 <div class="card">
-<dl>
+<ul>
 {% for category in site.categories %}
-  <dt><a href="/blog/categories/{{ category[0] | downcase }}/">{{ category[0] | upcase }}</a></dt>
+  <li><b><a href="/blog/categories/{{ category[0] | downcase }}/">{{ category[0] | upcase }}</a></b> ({{ category | last | size }})</li>
 {% endfor %}
-</dl>
+</ul>
 </div>
 </div>
   </div>

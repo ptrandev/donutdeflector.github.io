@@ -51,10 +51,19 @@
       {{ content }}
     </div>
 
+  <hr class="dark">
+
 <div class="categories">
-<span>Categories:</span>
+  <span>Categories:</span>
     {% for categories in page.categories %}
-<span><a class="post-category" href="/blog/categories/{{categories | downcase}}">{{categories}}</a></span>
+  <span><a class="post-category" href="/blog/categories/{{categories | downcase}}">{{categories}}</a></span>
+    {% endfor %}
+</div>
+
+<div class="tags">
+  <span>Tags:</span>
+    {% for tags in page.tags %}
+      <span class="post-tag">{{tags}}</span>
     {% endfor %}
 </div>
   </article>

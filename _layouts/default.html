@@ -30,7 +30,10 @@
         <div class="hero center-element">
           <div class="pure-g">
             <div class="pure-u-1-1 is-center l-box">
-              {% if page.title == "Blog" %}
+              {% if page.title == "About" %}
+              <h1>About</h1>
+              <p>Things to know about me.</p>
+              {% elsif page.title == "Blog" %}
               <h1>Blog</h1>
               <p>A place to write about my musings.</p>
               {% elsif page.title == "Categories" %}
