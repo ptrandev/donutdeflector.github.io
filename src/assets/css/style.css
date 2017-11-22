@@ -497,6 +497,7 @@ footer {
   width: 100%;
   max-width: 1160px;
   margin: auto;
+  text-align: center;
 }
 
 footer a {
@@ -528,7 +529,11 @@ footer p {
   margin-top: 1rem;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 375px) {
+  footer {
+    text-align: left;
+  }
+
   .copyright {
     display: inline-block;
     float: right;

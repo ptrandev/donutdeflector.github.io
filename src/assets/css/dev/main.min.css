@@ -690,7 +690,7 @@ html {
 }
 body {
   position: relative;  
-  background: url(/assets/images/thinkpad-keyboard-1440.jpg);
+  background-image: url(/assets/images/thinkpad-keyboard-1440.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -702,6 +702,7 @@ body {
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }
+
 a {
   color: #4352c6;
   outline: none;
@@ -3790,6 +3791,7 @@ footer {
   width: 100%;
   max-width: 1160px;
   margin: auto;
+  text-align: center;
 }
 
 footer a {
@@ -3821,7 +3823,11 @@ footer p {
   margin-top: 1rem;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 375px) {
+  footer {
+    text-align: left;
+  }
+
   .copyright {
     display: inline-block;
     float: right;
