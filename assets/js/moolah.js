@@ -1,6 +1,6 @@
 // Load exchange rates data via AJAX:
 $.getJSON(
-  'http://api.fixer.io/latest',
+  'https://api.fixer.io/latest',
   function(data) {
     // Check money.js has finished loading:
     if ( typeof fx !== "undefined" && fx.rates ) {
