@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blog
+categories: blog
+---
+
+<div class="pure-u-1-1">
+{% include blog-menu.html %}
+</div>
+
+<div class="post-list">
+{% for post in paginator.posts %}
+  <div class="post pure-u-1-1 pure-u-md-1-2">
+  <article class="card">
+    <div class="categories">
+    {% for categories in post.categories %}
+<span><a class="link-button post-category" href="/blog/categories/{{categories | downcase}}">{{categories}}</a></span>
+    {% endfor %}
+    </div>
+    <h4 class="no-margin-bottom"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+      <span class="date">{{post.date | date: "%B %e, %Y"}}</span>
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+    </div>
+  </article>
+{% endfor %}
+</div>
