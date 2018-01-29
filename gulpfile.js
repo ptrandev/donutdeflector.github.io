@@ -28,7 +28,7 @@ gulp.task('css', function() {
 
 gulp.task('img', function() {
   gulp.src(['src/assets/images/*.png'])
-    .pipe(imagemin([pngquant({quality: 0-72})]))
+    .pipe(imagemin([pngquant({quality: 0-80})]))
     .pipe(gulp.dest('assets/images'));
 
   gulp.src(['src/assets/images/*.jpg'])
