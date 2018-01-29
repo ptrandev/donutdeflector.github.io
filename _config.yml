@@ -15,6 +15,10 @@ avatar:
 paginate: 12
 paginate_path: "blog/page/:num/"
 
+# Collections
+collections:
+  projects:
+    output: true
 #
 # Flags below are optional
 #

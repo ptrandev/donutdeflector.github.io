@@ -78,6 +78,7 @@ h6 {
   font-size: 3rem;
 }
 
+button,
 span,
 ul,
 li,
@@ -94,7 +95,7 @@ a {
 a:focus,
 a:hover {
   color: var(--color-secondary);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .bold {
@@ -105,37 +106,54 @@ a:hover {
   font-size: 1.8rem;
 }
 
-.button {
-  padding: 1rem;
-  font-size: 2.2rem;
-  text-decoration: none;
-  background-color: var(--color-white);
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease-out;
+.l-box {
+  padding-bottom: 1rem;
 }
 
-.button:hover {
+.l-box:nth-child(odd) {
+  padding-right: 0;
+}
+
+button {
+  display: inline-block;
+  font-family: 'Akrobat', sans-serif;
+  font-weight: 400;
+  padding: 0.5rem 0.7rem;
+  font-size: 2.2rem;
   text-decoration: none;
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease-out;
+  border: none;
+}
+
+button:focus,
+button:hover {
+  text-decoration: none;
   cursor: pointer;
 }
 
 .button-primary {
-  color: var(--color-white);
-  background-color: var(--color-black);
-}
-
-.button-primary:hover {
+  color: var(--color-black);
   background-color: var(--color-primary);
 }
 
+.button-primary a {
+  color: var(--color-black);
+}
+
+.button-primary:focus,
+.button-primary:hover {
+  background-color: var(--color-secondary);
+}
+
 .card {
-  padding: 1rem 1rem 0;
-  margin-bottom: 2rem;
-  height: 100%;
-  background-color: var(--color-gray);
+  position: relative;
+  margin: 0;
+  padding: 1.5rem;
   box-shadow: var(--shadow);
-  transition: all 0.3s ease-out;
+  background-color: var(--color-gray);
+  transition: all 0.3s ease;
+  height: auto;
 }
 
 .card:focus,
@@ -302,14 +320,6 @@ nav {
   padding-bottom: 1.5rem;
 }
 
-.post {
-  height: auto;
-}
-
-.post:nth-child(odd) {
-  padding-right: 0;
-}
-
 .post-metadata {
   margin-top: 1.5rem;
 }
@@ -324,7 +334,7 @@ nav {
 }
 
 .tags {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
 }
 
@@ -349,6 +359,24 @@ nav {
 .link-button:hover {
   text-decoration: none;
   border: 1px solid var(--color-secondary);
+}
+
+.project-list {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.project-technology {
+  display: inline-block;
+  text-transform: uppercase;
+  border: 1px solid var(--color-white);
+  padding: 2px 5px;
+  margin-right: 5px;
+  font-size: 1.8rem;
+}
+
+.project-links button:first-child {
+  margin-right: 5px;
 }
 
 footer {
@@ -462,12 +490,12 @@ html {
 }
 
 @media (min-width: 768px) {
-.post {
+.card {
   height: 100%;
 }
 
-.post:nth-child(odd) {
-  padding-right: 10px;
+.l-box:nth-child(odd) {
+  padding-right: 1rem;
 }
 }
 
