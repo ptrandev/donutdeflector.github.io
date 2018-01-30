@@ -1,59 +1,29 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{ page.title }} // {{ site.name }}</title>
-    <meta charset="utf-8">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#212121">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#d6dae4">
-    <link rel="stylesheet" href="/assets/css/main.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+---
+layout: default
+---
 
-  <body>
-    <div class="container">
-      {% if page.title == "Home" %}
-      {% else %}
-        {% include nav.html %}
-      {% endif %}
-
-      {% include hero.html %}
-      <div class="content">
-        {% include blog-menu.html %}
-        <article>
-          <h3>{{ page.title }}</h3>
-          <span class="date"> {{page.date | date: "%B %e, %Y"}}</span>
-          <div class="entry">
-            {{content}}
-          </div>
-          <hr>
-          <div class="post-metadata">
-            <div class="categories">
-              <span class="small-label">Categories:</span>
-                {% for categories in page.categories %}
-              <span><a class="link-button post-category" href="/blog/categories/{{categories | downcase}}">{{categories}}</a></span>
-                {% endfor %}
-            </div>
-            <div class="tags">
-             <span class="small-label">Tags:</span>
-                {% for tags in page.tags %}
-                  <span class="post-tag">{{tags}}</span>
-                {% endfor %}
-            </div>
-          </div>
-        </article>
-        <div class="pure-u-1-1">
-          <hr>
-        </div>
-      </div>
-      
-      {% if page.title == "Home" %}
-      {% else %}
-        {% include footer.html %}
-      {% endif %}
+<div class="pure-u-1-1">
+  {% include blog-menu.html %}
+  <article>
+    <h3>{{ page.title }}</h3>
+    <span class="date"> {{page.date | date: "%B %e, %Y"}}</span>
+    <div class="entry">
+      {{content}}
     </div>
-  </body>
-</html>
+    <hr>
+    <div class="post-metadata">
+      <div class="categories">
+        <span class="small-label">Categories:</span>
+          {% for categories in page.categories %}
+            <span><a class="link-button post-category" href="/blog/categories/{{categories | downcase}}">{{categories}}</a></span>
+          {% endfor %}
+      </div>
+      <div class="tags">
+        <span class="small-label">Tags:</span>
+          {% for tags in page.tags %}
+            <span class="post-tag">{{tags}}</span>
+          {% endfor %}
+      </div>
+    </div>
+  </article>
+</div>

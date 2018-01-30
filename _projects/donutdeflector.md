@@ -9,4 +9,4 @@ meta:
 ---
 
 My own personal website, which undergoes rennovation
-periodically.
+periodically. Uses the Pure CSS grid system.

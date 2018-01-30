@@ -14,9 +14,9 @@
   font-weight: 400;
   font-style: normal;
   src:local("Akrobat Regular"),
-  url("/assets/fonts/Akrobat-Regular.otf"),
-  url("/assets/fonts/Akrobat-Regular.woff2"),
-  url("/assets/fonts/Akrobat-Regular.woff");
+  url("/assets/fonts/akrobat-regular.woff2"),
+  url("/assets/fonts/akrobat-regular.woff"),
+  url("/assets/fonts/akrobat-regular.ttf");
 }
 
 @font-face {
@@ -24,9 +24,9 @@
   font-weight: 900;
   font-style: normal;
   src:local("Phenomena Black"),
-  url("/assets/fonts/Phenomena-Black.otf"),
-  url("/assets/fonts/Phenomena-Black.woff2"),
-  url("/assets/fonts/Phenomena-Black.woff");
+  url("/assets/fonts/phenomena-black.woff2"),
+  url("/assets/fonts/phenomena-black.woff"),
+  url("/assets/fonts/phenomena-black.ttf");
 }
 
 * {
@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 10rem;
+  font-size: 8.5rem;
 }
 
 h2 {
@@ -80,8 +80,8 @@ h6 {
 
 button,
 span,
-ul,
 li,
+dl,
 p {
   font-size: 2.2rem;
 }
@@ -317,7 +317,6 @@ nav {
 
 .post-list {
   padding-top: 2rem;
-  padding-bottom: 1.5rem;
 }
 
 .post-metadata {
@@ -527,7 +526,7 @@ html {
 
 @media (min-width: 1440px) {
 .hero {
-  background: 
+  background:
   linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
   url('/assets/images/hero-mountain-1440.jpg') center / cover no-repeat;
 }

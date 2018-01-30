@@ -1,0 +1,14 @@
+---
+layout: default
+title: Archive
+---
+
+<div class="pure-u-1-1">
+  {% include blog-menu.html %}
+  <dl>
+    {% for post in site.posts %}
+    <dt>{{post.date | date: "%B %e, %Y"}}</dt>
+      <dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
+    {% endfor %}
+  </dl>
+</div>

@@ -1,0 +1,16 @@
+---
+layout: default
+title: Categories
+---
+
+{% assign categories = site.categories | sort: category %}
+
+<div class="pure-u-1-1">
+  {% include blog-menu.html %}
+  <ul>
+    {% for category in categories %}
+      <li><a href="/blog/categories/{{ category[0] | downcase }}/">{{ category[0] }}</a> ({{ category | last | size }})</li>
+    {% endfor %}
+  </ul>
+  </dl>
+</div>
