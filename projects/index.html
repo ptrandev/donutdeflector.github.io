@@ -22,14 +22,10 @@ categories: projects
         {{ project.excerpt }}
      <div class="project-links">
        {% for site in project.meta.site %}
-        <button class="button-primary">
-            <a target="_blank" rel="noopener" href="{{site}}">View Site</a>
-        </button>
+          <a class="button button-primary" target="_blank" rel="noopener" href="{{site}}">View Site</a>
       {% endfor %}
         {% for code in project.meta.code %}
-        <button class="button-primary">
-          <a target="_blank" rel="noopener" href="{{code}}">View Code</a>
-        </button>
+          <a class="button button-primary" target="_blank" rel="noopener" href="{{code}}">View Code</a>
         {% endfor %}
       </div>
     </div>
