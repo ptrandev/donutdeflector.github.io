@@ -17,7 +17,7 @@ categories: blog
 <span><a class="link-button post-category" href="/blog/categories/{{categories | downcase}}">{{categories}}</a></span>
     {% endfor %}
     </div>
-    <h4 class="no-margin-bottom"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+    <h3 class="no-margin-bottom"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
       <span class="date">{{post.date | date: "%B %e, %Y"}}</span>
       <div class="entry">
         {{ post.excerpt }}

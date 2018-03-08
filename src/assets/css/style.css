@@ -10,23 +10,21 @@
 }
 
 @font-face {
-  font-family: "Akrobat";
+  font-family: 'Encode Sans Condensed';
   font-weight: 400;
-  font-style: normal;
-  src:local("Akrobat Regular"),
-  url("/assets/fonts/akrobat-regular.woff2"),
-  url("/assets/fonts/akrobat-regular.woff"),
-  url("/assets/fonts/akrobat-regular.ttf");
+  src:
+    url('/assets/fonts/encode-sans-condensed-regular.woff2'),
+    url('/assets/fonts/encode-sans-condensed-regular.woff'),
+    url('/assets/fonts/encode-sans-condensed-regular.ttf');
 }
 
 @font-face {
-  font-family: "Phenomena";
-  font-weight: 900;
-  font-style: normal;
-  src:local("Phenomena Black"),
-  url("/assets/fonts/phenomena-black.woff2"),
-  url("/assets/fonts/phenomena-black.woff"),
-  url("/assets/fonts/phenomena-black.ttf");
+  font-family: 'Fjalla One';
+  font-weight: 400;
+  src:
+    url('/assets/fonts/fjalla-one-regular.woff2'),
+    url('/assets/fonts/fjalla-one-regular.woff'),
+    url('/assets/fonts/fjalla-one-regular.ttf');
 }
 
 * {
@@ -38,7 +36,7 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: 'Akrobat', sans-serif;
+  font-family: 'Encode Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 10px;
   color: var(--color-white);
@@ -49,33 +47,33 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-family: 'Phenomena', sans-serif;
-  font-weight: 900;
+  margin: 1rem 0 0 0;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: 8.5rem;
-}
-
-h2 {
-  font-size: 7rem;
-}
-
-h3 {
   font-size: 6rem;
 }
 
-h4 {
+h2 {
   font-size: 5rem;
 }
 
-h5 {
+h3 {
   font-size: 4rem;
 }
 
-h6 {
+h4 {
   font-size: 3rem;
+}
+
+h5 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  font-size: 2.2rem;
 }
 
 button,
@@ -116,9 +114,9 @@ a:hover {
 
 button {
   display: inline-block;
-  font-family: 'Akrobat', sans-serif;
+  font-family: 'Encode Sans Condensed', sans-serif;
   font-weight: 400;
-  padding: 0.5rem 0.7rem;
+  padding: 0.5rem 0.7rem 0.2rem;
   font-size: 2.2rem;
   text-decoration: none;
   box-shadow: var(--shadow);
@@ -134,9 +132,9 @@ button:hover {
 
 .button {
   display: inline-block;
-  font-family: 'Akrobat', sans-serif;
+  font-family: 'Encode Sans Condensed', sans-serif;
   font-weight: 400;
-  padding: 0.5rem 0.7rem;
+  padding: 0.5rem 0.7rem 0.2rem;
   font-size: 2.2rem;
   text-decoration: none;
   box-shadow: var(--shadow);
@@ -179,17 +177,16 @@ button:hover {
 nav {
   position: absolute;
   margin: 0 auto;
-  margin-top: 15px;
   left: 0;
   right: 0;
-  width: 320px;
+  background: var(--color-black);
+  color: var(--color-white);
+  border-top: 3px solid var(--color-primary);
   z-index: 3;
 }
 
 .nav-container {
   padding: 10px;
-  background: var(--color-black);
-  color: var(--color-white);
   box-shadow: var(--shadow);
   text-align: center;
 }
@@ -217,6 +214,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  margin-top: 58px;
   height: 320px;
   -webkit-box-shadow:inset 0px 0px 0px 0px var(--color-white);
   -moz-box-shadow:inset 0px 0px 0px 0px var(--color-white);
@@ -325,12 +323,16 @@ nav {
 }
 
 .blog-menu {
-  padding: 1rem 0 2rem 0;
+  padding: 1rem 0 2.2rem 0;
   border-bottom: 1px solid var(--color-white);
 }
 
+.blog-menu a {
+  font-size: 1.8rem;
+}
+
 .post-list {
-  padding-top: 2rem;
+  padding-top: 2.2rem;
 }
 
 .post-metadata {
@@ -364,7 +366,7 @@ nav {
 .link-button {
   text-transform: uppercase;
   border: 1px solid var(--color-primary);
-  padding: 2px 5px;
+  padding: 0.5rem 0.7rem 0.2rem;
   margin-right: 5px;
 }
 
@@ -375,7 +377,7 @@ nav {
 }
 
 .project-list {
-  padding-top: 2rem;
+  padding-top: 2.2rem;
   padding-bottom: 1.5rem;
 }
 
@@ -383,7 +385,7 @@ nav {
   display: inline-block;
   text-transform: uppercase;
   border: 1px solid var(--color-white);
-  padding: 2px 5px;
+  padding: 0.5rem 0.7rem 0.2rem;
   margin-right: 5px;
   font-size: 1.8rem;
 }
