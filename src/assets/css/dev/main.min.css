@@ -2697,7 +2697,326 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     .pure-u-xl-24-24 {
         width: 100%;
     }
-}/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+}#luxbar {
+  border-top: 3px solid var(--color-primary);
+}
+
+.luxbar-default {
+  width: 100%;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.luxbar-static {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000; }
+  .luxbar-static .luxbar-checkbox:checked ~ .luxbar-menu {
+    position: absolute; }
+
+.luxbar-fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.luxbar-fixed-bottom {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.luxbar-hamburger span, .luxbar-hamburger span::before, .luxbar-hamburger span::after {
+  display: block;
+  height: 2px;
+  width: 26px;
+  transition: 0.6s ease; }
+
+.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span {
+  background-color: transparent; }
+  .luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::before, .luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::after {
+    margin-top: 0; }
+
+.luxbar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px; }
+
+.luxbar-menu-left .luxbar-navigation, .luxbar-menu-left .luxbar-header {
+  justify-content: flex-start; }
+
+.luxbar-menu-right .luxbar-hamburger {
+  margin-left: auto; }
+
+.luxbar-brand {
+  font-size: 3rem;
+  font-family: 'Fjalla One';
+  font-weight: 400;
+  padding: 18px 24px 18px 24px; }
+
+.luxbar-menu {
+  min-height: 58px;
+  transition: height 0.6s ease;
+  width: 100%; }
+
+.luxbar-navigation {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  margin: 0; }
+
+.luxbar-menu a,
+.luxbar-item a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+ }
+
+.luxbar-item a:hover,
+.luxbar-item a:focus {
+  color: var(--color-white);
+}
+
+.luxbar-item {
+  height: 58px;
+  z-index: 1001;
+  transition: background-color 0.3s ease; }
+  .luxbar-item a {
+    padding: 18px 24px 18px 24px;
+    display: block; }
+
+.luxbar-hamburger {
+  padding: 18px 24px 18px 24px;
+  position: relative;
+  cursor: pointer; }
+  .luxbar-hamburger span::before, .luxbar-hamburger span::after {
+    content: '';
+    position: absolute; }
+  .luxbar-hamburger span::before {
+    margin-top: -8px; }
+  .luxbar-hamburger span::after {
+    margin-top: 8px; }
+
+.luxbar-checkbox {
+  display: none; }
+  .luxbar-checkbox:not(:checked) ~ .luxbar-menu {
+    overflow: hidden;
+    height: 58px; }
+  .luxbar-checkbox:checked ~ .luxbar-menu {
+    transition: height 0.6s ease;
+    height: 100vh;
+    overflow: auto; }
+
+.dropdown {
+  position: relative;
+  height: auto;
+  min-height: 58px; }
+  .dropdown:hover > ul {
+    position: relative;
+    display: block;
+    min-width: 100%; }
+  .dropdown > a::after {
+    position: absolute;
+    content: '';
+    right: 10px;
+    top: 25px;
+    border-width: 5px 5px 0;
+    border-color: transparent;
+    border-style: solid; }
+  .dropdown > ul {
+    display: block;
+    overflow-x: hidden;
+    list-style: none;
+    padding: 0; }
+    .dropdown > ul .luxbar-item {
+      min-width: 100%;
+      height: 29px;
+      padding: 5px 10px 5px 40px; }
+      .dropdown > ul .luxbar-item a {
+        min-height: 29px;
+        line-height: 29px;
+        padding: 0; }
+
+@media screen and (min-width: 600px) {
+  .luxbar-navigation {
+    flex-flow: row;
+    justify-content: flex-end; }
+
+  .luxbar-hamburger {
+    display: none; }
+
+  .luxbar-checkbox:not(:checked) ~ .luxbar-menu {
+    overflow: visible; }
+  .luxbar-checkbox:checked ~ .luxbar-menu {
+    height: 58px; }
+
+  .luxbar-menu .luxbar-item {
+    border-top: 3px soild var(--color-secondary); }
+
+  .luxbar-menu-right .luxbar-header {
+    margin-right: auto; }
+
+  .dropdown {
+    height: 58px; }
+    .dropdown:hover > ul {
+      position: absolute;
+      left: 0;
+      top: 58px;
+      padding: 0; }
+    .dropdown > ul {
+      display: none; }
+      .dropdown > ul .luxbar-item {
+        padding: 5px 10px; }
+        .dropdown > ul .luxbar-item a {
+          white-space: nowrap; } }
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::before {
+  transform: rotate(225deg); }
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::after {
+  transform: rotate(-225deg); }
+
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::before {
+  transform: rotate(45deg); }
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::after {
+  transform: rotate(-45deg); }
+
+/******* color variables *******/
+/******* default dark *******/
+.luxbar-menu-dark,
+.luxbar-menu-dark .dropdown ul {
+  background-color: var(--color-black); }
+
+.luxbar-menu-dark .active,
+.luxbar-menu-dark .luxbar-item:hover {
+  background-color: var(--color-gray-2);
+  color: inherit; }
+.luxbar-menu-dark .luxbar-hamburger span,
+.luxbar-menu-dark .luxbar-hamburger span::before,
+.luxbar-menu-dark .luxbar-hamburger span::after {
+  background-color: var(--color-white); }
+
+/******* default light *******/
+.luxbar-menu-light,
+.luxbar-menu-light .dropdown ul {
+  background-color: #e0e0e0;
+  color: var(--color-black); }
+
+.luxbar-menu-light .active,
+.luxbar-menu-light .luxbar-item:hover {
+  background-color: #bdbdbd; }
+.luxbar-menu-light .luxbar-hamburger span,
+.luxbar-menu-light .luxbar-hamburger span::before,
+.luxbar-menu-light .luxbar-hamburger span::after {
+  background-color: var(--color-black); }
+
+/******* default material-red *******/
+.luxbar-menu-material-red,
+.luxbar-menu-material-red .dropdown ul {
+  background-color: #b71c1c;
+  color: var(--color-white); }
+
+.luxbar-menu-material-red .active,
+.luxbar-menu-material-red .luxbar-item:hover {
+  background-color: #c62828; }
+.luxbar-menu-material-red .luxbar-hamburger span,
+.luxbar-menu-material-red .luxbar-hamburger span::before,
+.luxbar-menu-material-red .luxbar-hamburger span::after {
+  background-color: var(--color-white); }
+
+/******* default material-indigo *******/
+.luxbar-menu-material-indigo,
+.luxbar-menu-material-indigo .dropdown ul {
+  background-color: #1a237e;
+  color: var(--color-white); }
+
+.luxbar-menu-material-indigo .active,
+.luxbar-menu-material-indigo .luxbar-item:hover {
+  background-color: #283593; }
+.luxbar-menu-material-indigo .luxbar-hamburger span,
+.luxbar-menu-material-indigo .luxbar-hamburger span::before,
+.luxbar-menu-material-indigo .luxbar-hamburger span::after {
+  background-color: var(--color-white); }
+
+/******* default material-green *******/
+.luxbar-menu-material-green,
+.luxbar-menu-material-green .dropdown ul {
+  background-color: #1b5e20;
+  color: var(--color-white); }
+
+.luxbar-menu-material-green .active,
+.luxbar-menu-material-green .luxbar-item:hover {
+  background-color: #2e7d32; }
+.luxbar-menu-material-green .luxbar-hamburger span,
+.luxbar-menu-material-green .luxbar-hamburger span::before,
+.luxbar-menu-material-green .luxbar-hamburger span::after {
+  background-color: var(--color-white); }
+
+/******* default material-amber *******/
+.luxbar-menu-material-amber,
+.luxbar-menu-material-amber .dropdown ul {
+  background-color: #ff6f00;
+  color: var(--color-white); }
+
+.luxbar-menu-material-amber .active,
+.luxbar-menu-material-amber .luxbar-item:hover {
+  background-color: #ff8f00; }
+.luxbar-menu-material-amber .luxbar-hamburger span,
+.luxbar-menu-material-amber .luxbar-hamburger span::before,
+.luxbar-menu-material-amber .luxbar-hamburger span::after {
+  background-color: var(--color-white); }
+
+/******* default material-brown *******/
+.luxbar-menu-material-brown,
+.luxbar-menu-material-brown .dropdown ul {
+  background-color: #3e2723;
+  color: var(--color-white); }
+
+.luxbar-menu-material-brown .active,
+.luxbar-menu-material-brown .luxbar-item:hover {
+  background-color: #4e342e; }
+.luxbar-menu-material-brown .luxbar-hamburger span,
+.luxbar-menu-material-brown .luxbar-hamburger span::before,
+.luxbar-menu-material-brown .luxbar-hamburger span::after {
+  background-color: var(--color-white); }
+
+/******* default material-bluegrey *******/
+.luxbar-menu-material-bluegrey,
+.luxbar-menu-material-bluegrey .dropdown ul {
+  background-color: #263238;
+  color: var(--color-white); }
+
+.luxbar-menu-material-bluegrey .active,
+.luxbar-menu-material-bluegrey .luxbar-item:hover {
+  background-color: #37474f; }
+.luxbar-menu-material-bluegrey .luxbar-hamburger span,
+.luxbar-menu-material-bluegrey .luxbar-hamburger span::before,
+.luxbar-menu-material-bluegrey .luxbar-hamburger span::after {
+  background-color: var(--color-white); }
+
+/******* default material-cyan *******/
+.luxbar-menu-material-cyan,
+.luxbar-menu-material-cyan .dropdown ul {
+  background-color: #006064;
+  color: var(--color-white); }
+
+.luxbar-menu-material-cyan .active,
+.luxbar-menu-material-cyan .luxbar-item:hover {
+  background-color: #00838f; }
+.luxbar-menu-material-cyan .luxbar-hamburger span,
+.luxbar-menu-material-cyan .luxbar-hamburger span::before,
+.luxbar-menu-material-cyan .luxbar-hamburger span::after {
+  background-color: var(--color-white); }
+
+/*# sourceMappingURL=luxbar.css.map */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -3156,23 +3475,21 @@ template {
 }
 
 @font-face {
-  font-family: "Akrobat";
+  font-family: 'Encode Sans Condensed';
   font-weight: 400;
-  font-style: normal;
-  src:local("Akrobat Regular"),
-  url("/assets/fonts/akrobat-regular.woff2"),
-  url("/assets/fonts/akrobat-regular.woff"),
-  url("/assets/fonts/akrobat-regular.ttf");
+  src:
+    url('/assets/fonts/encode-sans-condensed-regular.woff2'),
+    url('/assets/fonts/encode-sans-condensed-regular.woff'),
+    url('/assets/fonts/encode-sans-condensed-regular.ttf');
 }
 
 @font-face {
-  font-family: "Phenomena";
-  font-weight: 900;
-  font-style: normal;
-  src:local("Phenomena Black"),
-  url("/assets/fonts/phenomena-black.woff2"),
-  url("/assets/fonts/phenomena-black.woff"),
-  url("/assets/fonts/phenomena-black.ttf");
+  font-family: 'Fjalla One';
+  font-weight: 400;
+  src:
+    url('/assets/fonts/fjalla-one-regular.woff2'),
+    url('/assets/fonts/fjalla-one-regular.woff'),
+    url('/assets/fonts/fjalla-one-regular.ttf');
 }
 
 * {
@@ -3184,7 +3501,7 @@ template {
 html, body {
   padding: 0;
   margin: 0;
-  font-family: 'Akrobat', sans-serif;
+  font-family: 'Encode Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 10px;
   color: var(--color-white);
@@ -3195,33 +3512,33 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-family: 'Phenomena', sans-serif;
-  font-weight: 900;
+  margin: 1rem 0 0 0;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: 8.5rem;
-}
-
-h2 {
-  font-size: 7rem;
-}
-
-h3 {
   font-size: 6rem;
 }
 
-h4 {
+h2 {
   font-size: 5rem;
 }
 
-h5 {
+h3 {
   font-size: 4rem;
 }
 
-h6 {
+h4 {
   font-size: 3rem;
+}
+
+h5 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  font-size: 2.2rem;
 }
 
 button,
@@ -3262,9 +3579,9 @@ a:hover {
 
 button {
   display: inline-block;
-  font-family: 'Akrobat', sans-serif;
+  font-family: 'Encode Sans Condensed', sans-serif;
   font-weight: 400;
-  padding: 0.5rem 0.7rem;
+  padding: 0.5rem 0.7rem 0.2rem;
   font-size: 2.2rem;
   text-decoration: none;
   box-shadow: var(--shadow);
@@ -3280,9 +3597,9 @@ button:hover {
 
 .button {
   display: inline-block;
-  font-family: 'Akrobat', sans-serif;
+  font-family: 'Encode Sans Condensed', sans-serif;
   font-weight: 400;
-  padding: 0.5rem 0.7rem;
+  padding: 0.5rem 0.7rem 0.2rem;
   font-size: 2.2rem;
   text-decoration: none;
   box-shadow: var(--shadow);
@@ -3325,17 +3642,16 @@ button:hover {
 nav {
   position: absolute;
   margin: 0 auto;
-  margin-top: 15px;
   left: 0;
   right: 0;
-  width: 320px;
+  background: var(--color-black);
+  color: var(--color-white);
+  border-top: 3px solid var(--color-primary);
   z-index: 3;
 }
 
 .nav-container {
   padding: 10px;
-  background: var(--color-black);
-  color: var(--color-white);
   box-shadow: var(--shadow);
   text-align: center;
 }
@@ -3363,6 +3679,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  margin-top: 58px;
   height: 320px;
   -webkit-box-shadow:inset 0px 0px 0px 0px var(--color-white);
   -moz-box-shadow:inset 0px 0px 0px 0px var(--color-white);
@@ -3471,12 +3788,16 @@ nav {
 }
 
 .blog-menu {
-  padding: 1rem 0 2rem 0;
+  padding: 1rem 0 2.2rem 0;
   border-bottom: 1px solid var(--color-white);
 }
 
+.blog-menu a {
+  font-size: 1.8rem;
+}
+
 .post-list {
-  padding-top: 2rem;
+  padding-top: 2.2rem;
 }
 
 .post-metadata {
@@ -3510,7 +3831,7 @@ nav {
 .link-button {
   text-transform: uppercase;
   border: 1px solid var(--color-primary);
-  padding: 2px 5px;
+  padding: 0.5rem 0.7rem 0.2rem;
   margin-right: 5px;
 }
 
@@ -3521,7 +3842,7 @@ nav {
 }
 
 .project-list {
-  padding-top: 2rem;
+  padding-top: 2.2rem;
   padding-bottom: 1.5rem;
 }
 
@@ -3529,7 +3850,7 @@ nav {
   display: inline-block;
   text-transform: uppercase;
   border: 1px solid var(--color-white);
-  padding: 2px 5px;
+  padding: 0.5rem 0.7rem 0.2rem;
   margin-right: 5px;
   font-size: 1.8rem;
 }
