@@ -10,12 +10,12 @@
 }
 
 @font-face {
-  font-family: 'Encode Sans Condensed';
+  font-family: 'Fira Sans Extra Condensed';
   font-weight: 400;
   src:
-    url('/assets/fonts/encode-sans-condensed-regular.woff2'),
-    url('/assets/fonts/encode-sans-condensed-regular.woff'),
-    url('/assets/fonts/encode-sans-condensed-regular.ttf');
+    url('/assets/fonts/Fira-Sans-Extra-Condensed-Regular.woff2'),
+    url('/assets/fonts/Fira-Sans-Extra-Condensed-Regular.woff'),
+    url('/assets/fonts/Fira-Sans-Extra-Condensed-Regular.ttf');
 }
 
 @font-face {
@@ -36,7 +36,7 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: 'Encode Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
   font-weight: 400;
   font-size: 10px;
   color: var(--color-white);
@@ -114,7 +114,7 @@ a:hover {
 
 button {
   display: inline-block;
-  font-family: 'Encode Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
   font-weight: 400;
   padding: 0.5rem 0.7rem 0.2rem;
   font-size: 2.2rem;
@@ -132,7 +132,7 @@ button:hover {
 
 .button {
   display: inline-block;
-  font-family: 'Encode Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
   font-weight: 400;
   padding: 0.5rem 0.7rem 0.2rem;
   font-size: 2.2rem;
@@ -158,7 +158,21 @@ button:hover {
   background-color: var(--color-secondary);
 }
 
+.button-secondary {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: 0.4rem 0.6rem 0.1rem;
+  background-color: none;
+}
+
+.button-secondary:focus,
+.button-secondary:hover {
+  border-color: var(--color-secondary);
+}
+
 .card {
+  display: flex;
+  flex-direction: column;
   position: relative;
   margin: 0;
   padding: 1.5rem;
@@ -377,7 +391,8 @@ nav {
 }
 
 .project-list {
-  padding-top: 2.2rem;
+  height: 100%;
+  padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
@@ -390,8 +405,37 @@ nav {
   font-size: 1.8rem;
 }
 
-.project-links button:first-child {
-  margin-right: 5px;
+.project-links {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.project-links {
+  border-top: 1px solid var(--color-white);
+}
+
+.project-links .button:first-child {
+  color: var(--color-black) !important;
+  background-color: var(--color-primary);
+}
+
+.project-links .button:first-child:focus,
+.project-links .button:first-child:hover {
+  color: var(--color-black);
+  background-color: var(--color-secondary);
+}
+
+.project-links .button:last-child {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: 0.4rem 0.6rem 0.1rem;
+  background-color: none;
+}
+
+.project-links .button:last-child:focus,
+.project-links .button:last-child:hover {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
 }
 
 footer {
