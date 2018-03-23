@@ -3379,7 +3379,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 1rem 0 0 0;
+  margin: 1.5rem 0 0 0;
   font-family: 'Fjalla One', sans-serif;
   font-weight: 700;
 }
@@ -3434,6 +3434,7 @@ a:hover {
 
 .small-label {
   font-size: 1.8rem;
+  margin-right: 0.5rem;
 }
 
 .l-box {
@@ -3448,7 +3449,7 @@ button {
   display: inline-block;
   font-family: 'Fira Sans Extra Condensed', sans-serif;
   font-weight: 400;
-  padding: 0.5rem 0.7rem 0.2rem;
+  padding: 0.4rem 0.7rem 0.2rem;
   font-size: 2.2rem;
   text-decoration: none;
   box-shadow: var(--shadow);
@@ -3466,7 +3467,7 @@ button:hover {
   display: inline-block;
   font-family: 'Fira Sans Extra Condensed', sans-serif;
   font-weight: 400;
-  padding: 0.5rem 0.7rem 0.2rem;
+  padding: 0.4rem 0.7rem 0.2rem;
   font-size: 2.2rem;
   text-decoration: none;
   box-shadow: var(--shadow);
@@ -3682,7 +3683,9 @@ nav {
 }
 
 .post-metadata {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--color-gray);
 }
 
 .categories {
@@ -3695,24 +3698,21 @@ nav {
 }
 
 .tags {
-  margin-bottom: 1rem;
   text-transform: uppercase;
 }
 
 .post-tag {
   display: inline-block;
   text-transform: uppercase;
-  border: 1px solid var(--color-white);
-  padding: 2px 5px;
   margin-top: 1rem;
-  margin-right: 5px;
+  margin-right: 0.5rem;
   font-size: 1.8rem;
 }
 
 .link-button {
   text-transform: uppercase;
   border: 1px solid var(--color-primary);
-  padding: 0.5rem 0.7rem 0.2rem;
+  padding: 0.4rem 0.7rem 0.2rem;
   margin-right: 5px;
 }
 
@@ -3732,7 +3732,7 @@ nav {
   display: inline-block;
   text-transform: uppercase;
   border: 1px solid var(--color-white);
-  padding: 0.5rem 0.7rem 0.2rem;
+  padding: 0.4rem 0.7rem 0.2rem;
   margin-right: 5px;
   font-size: 1.8rem;
 }
