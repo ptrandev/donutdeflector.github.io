@@ -3,13 +3,15 @@ layout: default
 ---
 
 <div class="pure-u-1-1">
-  {% include blog-menu.html %}
-  <article>
-    <h3>{{ page.title }}</h3>
-    <span class="date"> {{page.date | date: "%B %e, %Y"}}</span>
-    <div class="entry">
-      {{content}}
-    </div>
+    {% include blog-menu.html %}
+  <div class="post">
+    <article>
+      <h2>{{ page.title }}</h2>
+      <span class="date"> {{page.date | date: "%B %e, %Y"}}</span>
+      <div class="entry">
+        {{content}}
+      </div>
+    </article>
     <div class="post-metadata">
       <div class="categories">
         <span class="small-label">Categories:</span>
@@ -24,5 +26,5 @@ layout: default
           {% endfor %}
       </div>
     </div>
-  </article>
+  </div>
 </div>
