@@ -19,11 +19,16 @@ categories: projects
         {% for date in project.meta.date %}
         <span class="date">{{date}}</span>
         {% endfor %}
+        <div class="project-image">
+          <a href="{{ project.meta.hero }}" class="progressive replace">
+            <img src="{{ project.meta.hero | replace: '480','thumbnail'}}" class="preview" alt="{{project.title}} hero image">
+          </a>
+        </div>
         <div class="project-summary">
           {{ project.excerpt }}
         </div>
       <div class="project-links">
-        {% for meta in project.meta offset:1 %}
+        {% for meta in project.meta offset:2 %}
           <a class="button" target="_blank" rel="noopener" href="{{meta[1]}}">View {{meta[0] | capitalize}}</a>
         {% endfor %}
       </div>

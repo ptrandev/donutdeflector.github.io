@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: project
 title:  adblockah
 tags: ['shell', '*powershell']
 meta:
   date: 2016 Q3
+  hero: /assets/images/projects/adblockah-hero-480.png
   code: https://github.com/DonutDeflector/adblockah
 ---
 

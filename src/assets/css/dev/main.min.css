@@ -3463,6 +3463,39 @@ template {
 [hidden] {
   display: none;
 }
+/* progressive image CSS */
+.progressive {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  outline: none;
+}
+
+.progressive img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border: 0 none;
+}
+
+.progressive img.preview {
+  filter: blur(2vw);
+  transform: scale(1.05);
+}
+
+.progressive img.reveal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform, opacity;
+  animation: progressiveReveal 1s ease-out;
+}
+
+@keyframes progressiveReveal {
+	0% { transform: scale(1.05); opacity: 0; }
+	100% { transform: scale(1); opacity: 1; }
+}
 :root {
   --color-primary: #64D5CA;
   --color-secondary: #FA7EA8;
@@ -3551,6 +3584,7 @@ p {
 
 p {
   line-height: 1.3;
+  margin: 1.5rem 0;
 }
 
 a {
@@ -3565,6 +3599,13 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+
 .bold {
   font-weight: 700;
 }
@@ -3576,10 +3617,7 @@ a:hover {
 
 .l-box {
   padding-bottom: 1.5rem;
-}
-
-.l-box:nth-child(odd) {
-  padding-right: 0;
+  padding-left: 0.75rem;
 }
 
 button {
@@ -3643,7 +3681,6 @@ button:hover {
 .card {
   display: flex;
   flex-direction: column;
-  position: relative;
   margin: 0;
   padding: 1.5rem;
   box-shadow: var(--shadow);
@@ -3876,13 +3913,23 @@ nav {
   font-size: 1.8rem;
 }
 
-.project-links {
-  margin-top: auto;
-  padding-top: 1.5rem;
+.project-image {
+  margin-top: 1.5rem;
+  width: 100%;
+  border: 0.3rem solid var(--color-white);
+  box-shadow: var(--shadow);
+  transition: border 0.3s ease;
+}
+
+.project-image-link:focus,
+.project-image-link:hover {
+  border: 0.3rem solid var(--color-secondary);
 }
 
 .project-links {
-  border-top: 1px solid var(--color-white);
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 0.3rem solid var(--color-white);
 }
 
 .project-links .button:first-child {
@@ -4039,7 +4086,8 @@ html {
 }
 
 .l-box:nth-child(odd) {
-  padding-right: 1.5rem;
+  padding-left: 0;
+  padding-right: 0.75rem;
 }
 }
 

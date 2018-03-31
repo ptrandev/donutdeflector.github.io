@@ -28,9 +28,11 @@
 {% else %}
 <div class="hero hero-secondary">
     <div class="hero-container">
-      <div class="heading">
+      <div class="heading-container">
         {% if page.layout == "post" %}
         <h1>Blog</h1>
+        {% elsif page.layout == "project" %}
+        <h1>Projects</h1>
         {% else %}
         <h1>{{ page.title }}</h1>
         {% endif %}
@@ -46,8 +48,12 @@
         <span class="subheading">A list of all blog posts.</span>
         {% elsif page.title == "Projects" %}
         <span class="subheading">What I make and why I make it.</span>
+        {% elsif page.title == "Colophon" %}
+        <span class="subheading">What built this site.</span>
         {% elsif page.layout == "post" %}
         <span class="subheading">What I think and why I think it.</span>
+        {% elsif page.layout == "project" %}
+        <span class="subheading">What I make and why I make it.</span>
         {% elsif page.layout == "categories" %}
         <span class="subheading">Posts about {{ page.title | downcase }}.</span>
         {% endif %}
