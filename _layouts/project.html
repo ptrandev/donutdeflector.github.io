@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="pure-u-1-1">
+  <div class="post">
+    <article>
+      <h2>{{ page.title }}</h2>
+      <span class="date"> {{ page.meta.date }}</span>
+      <div class="project-image">
+        <a href="{{ page.meta.hero }}" class="progressive replace">
+          <img src="{{ page.meta.hero | replace: '480','thumbnail'}}" class="preview">
+        </a>
+      </div>
+      <div class="entry">
+        {{content}}
+      </div>
+    </article>
+  </div>
+</div>
