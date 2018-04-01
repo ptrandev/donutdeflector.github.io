@@ -39,6 +39,7 @@ html, body {
   font-family: 'Fira Sans Extra Condensed', sans-serif;
   font-weight: 400;
   font-size: 10px;
+  line-height: 1.3;
   color: var(--color-white);
   background-color: var(--color-black);
   width: 100%;
@@ -48,6 +49,7 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 1.5rem 0 0;
+  line-height: 1;
   font-family: 'Fjalla One', sans-serif;
   font-weight: 700;
 }
@@ -84,8 +86,9 @@ p {
   font-size: 2.2rem;
 }
 
+ul,
+ol,
 p {
-  line-height: 1.3;
   margin: 1.5rem 0;
 }
 
