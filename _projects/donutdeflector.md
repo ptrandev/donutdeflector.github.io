@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  DonutDeflector
-tags: ['html', 'css']
+tags: ['html/css', 'javascript']
 meta:
   date: 2015 Q4
   hero: /assets/images/projects/donutdeflector-hero-480.jpg
@@ -14,5 +14,4 @@ periodically. Uses the Pure CSS grid system.
 
 ---
 
-My website has changed significantly since the forth quarter of
-2015.
+My website has changed significantly since the forth quarter of 2015.

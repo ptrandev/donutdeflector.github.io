@@ -7,35 +7,32 @@ categories: projects
 {% assign projects = site.projects | sort: 'meta.date' %}
 
 <div class="project-list pure-g">
-{% for project in projects reversed %}
+  {% for project in projects reversed %}
   <div class="l-box pure-u-1-1 pure-u-md-1-2">
     <div class="card project">
       <div class="categories">
-      {% for tags in project.tags %}
+        {% for tags in project.tags %}
         <span class="project-technology">{{tags}}</span>
-      {% endfor %}
+        {% endfor %}
       </div>
       <h3>{{ project.title }}</h3>
-        {% for date in project.meta.date %}
-        <span class="date">{{date}}</span>
-        {% endfor %}
-        <div class="project-image">
-          <a href="{{ project.meta.hero }}" class="progressive replace">
-            <img src="{{ project.meta.hero | replace: '480','thumbnail'}}" class="preview" alt="{{project.title}} hero image">
-          </a>
-        </div>
-        <div class="project-summary">
-          {{ project.excerpt }}
-        </div>
+      {% for date in project.meta.date %}
+      <span class="date">{{date}}</span>
+      {% endfor %}
+      <div class="project-image">
+        <a href="{{ project.meta.hero }}" class="progressive replace">
+          <img src="{{ project.meta.hero | replace: '480','thumbnail'}}" class="preview" alt="{{project.title}} hero image">
+        </a>
+      </div>
+      <div class="project-summary">
+        {{ project.excerpt }}
+      </div>
       <div class="project-links">
         {% for meta in project.meta offset:2 %}
-          <a class="button" target="_blank" rel="noopener" href="{{meta[1]}}">View {{meta[0] | capitalize}}</a>
+        <a class="button" target="_blank" rel="noopener" href="{{meta[1]}}">View {{meta[0] | capitalize}}</a>
         {% endfor %}
       </div>
     </div>
   </div>
-{% endfor %}
-  <div class="pure-u-1-1">
-    <span>*This language was not used by myself but by a contributor.</span>
-  </div>
+  {% endfor %}
 </div>

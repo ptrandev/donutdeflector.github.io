@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  Anime Ocean
-tags: ['html', 'css']
+tags: ['html/css']
 meta:
   date: 2017 Q3
   hero: /assets/images/projects/anime-ocean-hero-480.jpg
