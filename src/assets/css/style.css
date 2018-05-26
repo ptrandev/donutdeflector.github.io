@@ -1,30 +1,28 @@
 :root {
-  --color-primary: #64D5CA;
-  --color-secondary: #FA7EA8;
-  --color-white: #DAE1E7;
+  --color-primary: #64d5ca;
+  --color-secondary: #fa7ea8;
+  --color-white: #dae1e7;
   --color-gray: #2d353d;
   --color-gray-2: #313b44;
-  --color-black: #22292F;
-  --shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  --shadow-2: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  --color-black: #22292f;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-2: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 @font-face {
-  font-family: 'Fira Sans Extra Condensed';
+  font-family: "Fira Sans Extra Condensed";
   font-weight: 400;
-  src:
-    url('/assets/fonts/Fira-Sans-Extra-Condensed-Regular.woff2'),
-    url('/assets/fonts/Fira-Sans-Extra-Condensed-Regular.woff'),
-    url('/assets/fonts/Fira-Sans-Extra-Condensed-Regular.ttf');
+  src: url("/assets/fonts/Fira-Sans-Extra-Condensed-Regular.woff2"),
+    url("/assets/fonts/Fira-Sans-Extra-Condensed-Regular.woff"),
+    url("/assets/fonts/Fira-Sans-Extra-Condensed-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'Fjalla One';
+  font-family: "Fjalla One";
   font-weight: 400;
-  src:
-    url('/assets/fonts/fjalla-one-regular.woff2'),
-    url('/assets/fonts/fjalla-one-regular.woff'),
-    url('/assets/fonts/fjalla-one-regular.ttf');
+  src: url("/assets/fonts/fjalla-one-regular.woff2"),
+    url("/assets/fonts/fjalla-one-regular.woff"),
+    url("/assets/fonts/fjalla-one-regular.ttf");
 }
 
 * {
@@ -33,10 +31,11 @@
   -webkit-box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
-  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
   font-weight: 400;
   font-size: 10px;
   line-height: 1.3;
@@ -47,10 +46,15 @@ html, body {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 1.5rem 0 0;
   line-height: 1;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", sans-serif;
   font-weight: 700;
 }
 
@@ -126,7 +130,7 @@ img {
 
 button {
   display: inline-block;
-  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
   font-weight: 400;
   padding: 0.4rem 0.7rem 0.2rem;
   font-size: 2.2rem;
@@ -144,7 +148,7 @@ button:hover {
 
 .button {
   display: inline-block;
-  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-family: "Fira Sans Extra Condensed", sans-serif;
   font-weight: 400;
   padding: 0.4rem 0.7rem 0.2rem;
   font-size: 2.2rem;
@@ -227,10 +231,15 @@ nav {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/hero-mountain-720.jpg') center / cover no-repeat;
-  border: 1rem solid var(--color-white);
+  background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+      repeat-x top / 100% 100%,
+    url("/assets/images/hero-mountain-720.jpg") center / cover no-repeat;
+}
+
+.hero.replace {
+  background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+      repeat-x top / 100% 100%,
+    url("/assets/images/hero-mountain-thumbnail.jpg") center / cover no-repeat;
 }
 
 .hero-secondary {
@@ -244,16 +253,35 @@ nav {
 }
 
 .hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   z-index: 1;
-  width: auto;
   padding: 0 1.5rem;
   margin: auto;
   text-align: center;
+  border: 1rem solid var(--color-white);
+  box-shadow: var(--shadow-2);
+  width: calc(100vw - 10rem);
+  height: calc(100vh - 10rem);
+  background-image: linear-gradient(to top, #64d5ca15 0%, #fa7ea80c 100%);
+}
+
+.hero-secondary .hero-container {
+  border: 0;
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  background-image: none;
 }
 
 .heading-container {
-  padding-bottom: 1rem;
   margin-bottom: 1rem;
+}
+
+.heading {
+  display: inline-block;
+  padding-bottom: 1rem;
   border-bottom: 7px double var(--color-white);
 }
 
@@ -277,7 +305,7 @@ nav {
   position: absolute;
   text-align: center;
   width: 100%;
-  bottom: 5vh;
+  bottom: 10vh;
   z-index: 1;
 }
 
@@ -307,8 +335,8 @@ nav {
   justify-content: center;
   align-items: center;
   color: var(--color-white) !important;
-  background: 
-    linear-gradient(var(--mask-color),var(--mask-color)) repeat-x top / 100% 100%,
+  background: linear-gradient(var(--mask-color), var(--mask-color)) repeat-x top /
+      100% 100%,
     var(--bg-url) center center no-repeat / cover;
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -320,21 +348,39 @@ nav {
 }
 
 .about {
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/about-480.jpg') center / cover no-repeat;
+  background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+      repeat-x top / 100% 100%,
+    url("/assets/images/about-480.jpg") center / cover no-repeat;
+}
+
+.about.replace {
+  background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+      repeat-x top / 100% 100%,
+    url("/assets/images/about-thumbnail.jpg") center / cover no-repeat;
 }
 
 .blog {
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/blog-480.jpg') center / cover no-repeat;
+  background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+      repeat-x top / 100% 100%,
+    url("/assets/images/blog-480.jpg") center / cover no-repeat;
+}
+
+.blog.replace {
+  background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+      repeat-x top / 100% 100%,
+    url("/assets/images/blog-thumbnail.jpg") center / cover no-repeat;
 }
 
 .projects {
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/projects-480.jpg') center / cover no-repeat;
+  background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+      repeat-x top / 100% 100%,
+    url("/assets/images/projects-480.jpg") center / cover no-repeat;
+}
+
+.projects.replace {
+  background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+      repeat-x top / 100% 100%,
+    url("/assets/images/projects-thumbnail.jpg") center / cover no-repeat;
 }
 
 .content {
@@ -486,7 +532,7 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
-  content: '';
+  content: "";
   z-index: 0;
   background: inherit;
   top: 0;
@@ -502,7 +548,7 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
-  content: '';
+  content: "";
   z-index: 0;
   background: inherit;
   top: 0;
@@ -513,143 +559,159 @@ footer {
   transform: skewY(2deg);
 }
 
-@media (min-width: 0px) and (max-width: 340px) {
-.heading {
-  font-size: 4.5rem;
-}
+@media (min-width: 0px) and (max-width: 370px) {
+  .heading {
+    font-size: 4rem;
+  }
+  .hero .subheading {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width: 375px) {
-.footer-copyright {
-  display: block;
-  float: none;
-  margin-top: 5px;
-}
-}
-
-@media (min-width: 341px) and (max-width: 400px) {
-.heading {
-  font-size: 5rem;
-}
+  .footer-copyright {
+    display: block;
+    float: none;
+    margin-top: 5px;
+  }
 }
 
-@media (min-width: 401px) and (max-width: 425px) {
-.heading {
-  font-size: 5.5rem;
+@media (min-width: 371px) and (max-width: 400px) {
+  .heading {
+    font-size: 5rem;
+  }
+  .hero .subheading {
+    font-size: 2rem;
+  }
 }
+
+@media (min-width: 401px) and (max-width: 430px) {
+  .heading {
+    font-size: 5.5rem;
+  }
+  .hero .subheading {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-height: 512px) {
-.hero {
-justify-content: flex-start;
+  .hero {
+    justify-content: flex-start;
+  }
+  .hero-secondary {
+    justify-content: center;
+  }
 }
-.hero-secondary {
-  justify-content: center;
-}
+
+@media (max-width: 768px) {
+  .hero-container {
+    width: calc(100vw - 2.5rem);
+    height: calc(100vh - 2.5rem);
+  }
 }
 
 @media (max-width: 1024px) {
-html {
-  font-size: 9px;
-}
+  html {
+    font-size: 9px;
+  }
 
-.menu {
-  flex-direction: column;
-}
+  .menu {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 1200px) {
-.about {
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/about-720.jpg') center / cover no-repeat;
-}
+  .about {
+    background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+        repeat-x top / 100% 100%,
+      url("/assets/images/about-720.jpg") center / cover no-repeat;
+  }
 
-.blog {
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/blog-720.jpg') center / cover no-repeat;
-}
+  .blog {
+    background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+        repeat-x top / 100% 100%,
+      url("/assets/images/blog-720.jpg") center / cover no-repeat;
+  }
 
-.projects {
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/projects-720.jpg') center / cover no-repeat;
-}
+  .projects {
+    background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+        repeat-x top / 100% 100%,
+      url("/assets/images/projects-720.jpg") center / cover no-repeat;
+  }
 }
 
 @media (min-width: 768px) {
-.card {
-  height: 100%;
-}
+  .card {
+    height: 100%;
+  }
 
-.l-box {
-  padding-bottom: 1.5rem;
-  padding-left: 0.75rem;
-}
+  .l-box {
+    padding-bottom: 1.5rem;
+    padding-left: 0.75rem;
+  }
 
-.l-box:nth-child(odd) {
-  padding-left: 0;
-  padding-right: 0.75rem;
-}
+  .l-box:nth-child(odd) {
+    padding-left: 0;
+    padding-right: 0.75rem;
+  }
 }
 
 @media (min-width: 1900px) {
-.hero {
-  background: 
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/hero-mountain-1080.jpg') center / cover no-repeat;
-}
+  .hero {
+    background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+        repeat-x top / 100% 100%,
+      url("/assets/images/hero-mountain-1080.jpg") center / cover no-repeat;
+  }
 
-.about {
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/about-1080.jpg') center / cover no-repeat;
-}
+  .about {
+    background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+        repeat-x top / 100% 100%,
+      url("/assets/images/about-1080.jpg") center / cover no-repeat;
+  }
 
-.blog {
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/blog-1080.jpg') center / cover no-repeat;
-}
+  .blog {
+    background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+        repeat-x top / 100% 100%,
+      url("/assets/images/blog-1080.jpg") center / cover no-repeat;
+  }
 
-.projects {
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/projects-1080.jpg') center / cover no-repeat;
-}
+  .projects {
+    background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+        repeat-x top / 100% 100%,
+      url("/assets/images/projects-1080.jpg") center / cover no-repeat;
+  }
 }
 
 @media (min-width: 2400px) {
-.hero {
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/hero-mountain-1440.jpg') center / cover no-repeat;
-}
+  .hero {
+    background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+        repeat-x top / 100% 100%,
+      url("/assets/images/hero-mountain-1440.jpg") center / cover no-repeat;
+  }
 
-.about {
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/about-1440.jpg') center / cover no-repeat;
-}
+  .about {
+    background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+        repeat-x top / 100% 100%,
+      url("/assets/images/about-1440.jpg") center / cover no-repeat;
+  }
 
-.blog {
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/blog-1440.jpg') center / cover no-repeat;
-}
+  .blog {
+    background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+        repeat-x top / 100% 100%,
+      url("/assets/images/blog-1440.jpg") center / cover no-repeat;
+  }
 
-.projects {
-  background:
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/projects-1440.jpg') center / cover no-repeat;
-}
+  .projects {
+    background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+        repeat-x top / 100% 100%,
+      url("/assets/images/projects-1440.jpg") center / cover no-repeat;
+  }
 }
 
 @media (min-width: 3000px) {
-.hero {
-  background: 
-  linear-gradient(rgba(34, 41, 47, 0.6),rgba(34, 41, 47, 0.6)) repeat-x top / 100% 100%,
-  url('/assets/images/hero-mountain-2160.jpg') center / cover no-repeat;
-}
+  .hero {
+    background: linear-gradient(rgba(34, 41, 47, 0.6), rgba(34, 41, 47, 0.6))
+        repeat-x top / 100% 100%,
+      url("/assets/images/hero-mountain-2160.jpg") center / cover no-repeat;
+  }
 }

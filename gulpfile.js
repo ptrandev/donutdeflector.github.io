@@ -67,6 +67,14 @@ gulp.task('img', function() {
     .pipe(rename(function (path) { path.basename += "-480"; }))
     .pipe(gulp.dest('assets/images'));
 
+ gulp.src('src/assets/images/*.{jpg,png}')
+    .pipe(changed('assets/images'))
+    .pipe(gm(function (gmfile) {return gmfile.resize(16, null).quality(100);}))
+    .pipe(imagemin([mozjpeg({progressive: true, quality: 90})]))
+    .pipe(imagemin([pngquant({quality: 0-90})]))
+    .pipe(rename(function (path) { path.basename += "-thumbnail"; }))
+    .pipe(gulp.dest('assets/images'));
+
   /* Projects */
   gulp.src('src/assets/images/projects/*.{jpg,png}')
     .pipe(changed('assets/images/projects'))
