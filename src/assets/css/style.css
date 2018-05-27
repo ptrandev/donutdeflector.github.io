@@ -285,6 +285,13 @@ nav {
   border-bottom: 7px double var(--color-white);
 }
 
+.heading-container h1,
+.heading-container h2 {
+  display: inline-block;
+  padding-bottom: 1rem;
+  border-bottom: 7px double var(--color-white);
+}
+
 .subheading-container {
   margin-bottom: 1rem;
 }
