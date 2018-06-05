@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="pure-u-1-1">
-    {% include blog-menu.html %}
+  {% include blog-menu.html %}
   <div class="post">
     <article>
       <h2>{{ page.title }}</h2>
@@ -15,15 +15,17 @@ layout: default
     <div class="post-metadata">
       <div class="categories">
         <span class="small-label">Categories:</span>
-          {% for categories in page.categories %}
-            <span><a class="link-button post-category" href="/blog/categories/{{categories | downcase}}">{{categories}}</a></span>
-          {% endfor %}
+        {% for categories in page.categories %}
+        <span>
+          <a class="link-button post-category" href="/blog/categories/{{categories | downcase}}">{{categories}}</a>
+        </span>
+        {% endfor %}
       </div>
       <div class="tags">
         <span class="small-label">Tags:</span>
-          {% for tags in page.tags %}
-            <span class="post-tag">{{tags}}</span>
-          {% endfor %}
+        {% for tags in page.tags %}
+        <span class="post-tag">{{tags}}</span>
+        {% endfor %}
       </div>
     </div>
   </div>

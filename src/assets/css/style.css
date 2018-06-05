@@ -53,7 +53,7 @@ h4,
 h5,
 h6 {
   margin: 1.5rem 0 0;
-  line-height: 1;
+  line-height: 1.2;
   font-family: "Fjalla One", sans-serif;
   font-weight: 700;
 }
@@ -113,6 +113,26 @@ img {
   width: 100%;
   height: auto;
   border: 0;
+}
+
+blockquote {
+  border-left: 0.2rem solid var(--color-primary);
+  margin: 1.5rem 0 1.5rem 1.5rem;
+  padding-left: 1.5rem;
+}
+
+figure {
+  margin: 1.5rem 0;
+  border: 0.3rem solid var(--color-white);
+  box-shadow: var(--shadow);
+}
+
+figcaption {
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 1rem 0.7rem;
 }
 
 .bold {
@@ -273,6 +293,10 @@ nav {
   width: auto;
   height: auto;
   background-image: none;
+}
+
+.hero-secondary .subheading {
+  font-size: 2.4rem !important;
 }
 
 .heading-container {
@@ -443,6 +467,21 @@ nav {
   font-size: 1.8rem;
 }
 
+#markdown-toc::before {
+  content: "Table of Contents";
+  line-height: 1.2;
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+#markdown-toc {
+  border-top: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-white);
+  padding: 1.5rem;
+  list-style-position: inside;
+}
+
 .link-button {
   text-transform: uppercase;
   border: 1px solid var(--color-primary);
@@ -564,6 +603,45 @@ footer {
   left: 0;
   transform-origin: top left;
   transform: skewY(2deg);
+}
+
+.color-pallette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.color-pallette-tile {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 17.5rem;
+  width: 15rem;
+  border: 0.3rem solid var(--color-white);
+  box-shadow: var(--shadow);
+  margin: 0.5rem;
+}
+
+.color-pallette-title {
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.color-info {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  text-align: center;
+  padding: 1rem 0.5rem;
+  width: 100%;
+}
+
+.color-info span {
+  font-size: 1.8rem;
 }
 
 @media (min-width: 0px) and (max-width: 370px) {

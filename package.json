@@ -22,6 +22,7 @@
     "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
     "gulp-gm": "0.0.9",
+    "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.4.0",
     "gulp-rename": "^1.2.3",
     "gulp-strip-comments": "^2.5.2",

@@ -1,0 +1,14 @@
+<div class="color-pallette">
+  <div class="color-pallette-tile color-pallette-title">
+    <h6>Color Pallette for {{include.projectName}}</h6>
+  </div>
+  {% for color in colors %}
+  <div class="color-pallette-tile" style="background-color: {{color}}">
+    {% assign currentColor = {{forloop.index0}} %}
+    <div class="color-info">
+      <span>{{colorNames[currentColor]}}</span>
+      <span>{{color}}</span>
+    </div>
+  </div>
+  {% endfor %}
+</div>

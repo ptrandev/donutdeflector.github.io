@@ -3,7 +3,7 @@ layout: post
 title:  "A New Project: TEKaholics"
 date:   2017-07-28
 categories:
-- Design
+- Projects
 tags: [jekyll, tekaholics, gulp, html, css]
 ---
 
@@ -11,8 +11,7 @@ tags: [jekyll, tekaholics, gulp, html, css]
 
 It all started when a friend of mine, Traven, wanted to get back into blogging.
 Traven had a small following of readers on his blog **TheLastTechie**. However,
-his last post, titled **The Weak Case Against Strong Encryption** was on December 06,
-2016.
+his last post, titled **The Weak Case Against Strong Encryption** was on December 06, 2016.
 
 Traven expressed his desire to get back into blogging to the staff team of his
 technology-based Discord server. I'm part of the staff team of course. How could

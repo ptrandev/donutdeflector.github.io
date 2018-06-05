@@ -95,3 +95,6 @@ exclude:
   - src
   - node_modules
   - gulpfile.js
+
+# Kramdown
+markdown: kramdown
