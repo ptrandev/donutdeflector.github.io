@@ -8,8 +8,8 @@ tags: [chemistry, css, html, javascript, mendeleev, science, vue.js]
 ---
 
 Around November of 2017, I thought about embarking on a new project in order to
-sharpen my web development skills. I wanted to create something that was useful
-and interesting to work on.
+sharpen my web development skills. I wanted to create a useful and interesting
+weekend project.
 
 Because I was taking chemistry in school and had a life-long love of science, I
 decided to create an
