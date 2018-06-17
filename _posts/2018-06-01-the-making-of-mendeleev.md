@@ -57,7 +57,7 @@ roadblocks is always a little bit frustrating. However, I knew that I would
 eventually be able to understand how to approach the problem and solve it.
 
 At times during the development process, I felt like I wasn't making very good
-progress or forgetting to implement certain features. I had to figure out a
+progress or was forgetting to implement certain features. I had to figure out a
 method of keeping organized so I decided to use Trello to track my tasks. Trello
 greatly improved my perceived and actual productivity. It allowed me to keep
 track of features I needed to implement, bugs I needed to fix, and changes
