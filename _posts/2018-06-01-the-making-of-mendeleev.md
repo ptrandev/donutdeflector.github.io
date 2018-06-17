@@ -17,7 +17,7 @@ decided to create an
 
 At first I was using vanilla HTML/CSS and jQuery. However, I soon realized that
 this was beyond sub-optimal. In an effort to maximize development speed and pick
-up Javascript framework, I decided to learn Vue.js.
+up a Javascript framework, I decided to learn Vue.js.
 
 {% include toc.html %}
 
