@@ -11,33 +11,21 @@
     <meta name="theme-color" content="#22292F">
     <link rel="stylesheet" href="/assets/css/main.min.css">
     <script src="/assets/js/main.min.js"></script>
-    <meta name="description" content="Personal website of DonutDeflector: Web developer, Blogger, and Linux Enthusiast.">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700" rel="stylesheet">
+    <meta name="description" content="Personal website of DonutDeflector: Full Process Web Developer.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
     <div class="container">
-      {% if page.title == "Home" %}
-      {% else %}
-        {% include nav.html %}
-      {% endif %}
+      {% include nav.html %}
 
-      {% include hero.html %}
-
-      {% if page.title == "Home"%}
-        {{ content }}
+      {% if page.title == "Homepage" %}
+      {{ content }}
       {% else %}
-      <div class="content pure-g">
-        {{ content }}
-        <div class="pure-u-1-1">
-          <hr>
-        </div>
+      <div class="content">
+        {{content}}
       </div>
-      {% endif %}
-      
-      {% if page.title == "Home" %}
-      {% else %}
-        {% include footer.html %}
       {% endif %}
     </div>
   </body>
