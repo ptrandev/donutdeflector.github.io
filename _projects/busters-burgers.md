@@ -4,7 +4,7 @@ title: Buster's Burgers
 tags: ['html/css']
 meta:
   date: 2018 Q3
-  hero: /assets/images/projects/donutdeflector-hero-480.jpg
+  hero: /assets/images/projects/busters-burgers-hero-480.jpg
   site: https://donutdeflector.me/busters-burgers
   code: https://github.com/DonutDeflector/busters-burgers
 ---
