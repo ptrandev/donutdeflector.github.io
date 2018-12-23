@@ -571,6 +571,7 @@ footer {
 
 .footer-links {
   display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .footer-copyright {
