@@ -3,6 +3,7 @@ layout: project
 title:  DonutDeflector v6
 tags: ['html/css', 'javascript']
 meta:
+  featured: true
   date: 2017 Q4
   hero: /assets/images/projects/donutdeflector-hero-480.jpg
   site: https://donutdeflector.me/

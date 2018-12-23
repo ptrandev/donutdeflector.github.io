@@ -3,6 +3,7 @@ layout: project
 title: Buster's Burgers
 tags: ['html/css']
 meta:
+  featured: true
   date: 2018 Q3
   hero: /assets/images/projects/busters-burgers-hero-480.jpg
   site: https://donutdeflector.me/busters-burgers
