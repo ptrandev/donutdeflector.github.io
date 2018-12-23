@@ -35,7 +35,8 @@ gulp.task('css', function() {
     'blockquote',
     'figure',
     'figcaption',
-    '#markdown-toc'
+    '#markdown-toc',
+    'p'
   ]
 
   const plugins = [

@@ -578,6 +578,11 @@ footer {
   margin-top: 0;
 }
 
+.footer-button {
+  display: inline-block;
+  font-size: 1.8rem;
+}
+
 .slanted-top,
 .slanted-bottom {
   position: relative;
