@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>{% if page.title == "Home" %}{% else %}{{ page.title }} || {% endif %}{{ site.name }}</title>
-    <meta charset="utf-8">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#212121">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#22292F">
-    <link rel="stylesheet" href="/assets/css/main.min.css">
-    <script src="/assets/js/main.min.js"></script>
-    <meta name="description" content="Personal website of DonutDeflector: Web developer, Blogger, and Linux Enthusiast.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
 
-  <body>
-    <div class="container">
-      {% if page.title == "Home" %}
-      {% else %}
-        {% include nav.html %}
-      {% endif %}
+<head>
+  <title>{% if page.title == "Home" %}{% else %}{{ page.title }} || {% endif %}{{ site.name }}</title>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#212121">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#22292F">
+  <link rel="stylesheet" href="/assets/css/main.min.css">
+  <script src="/assets/js/main.min.js"></script>
+  <meta name="description" content="Personal website of DonutDeflector: Web developer, Blogger, and Linux Enthusiast.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-      {% include hero.html %}
+<body>
+  <div id="swup" class="transition-fade container">
+    {% if page.title == "Home" %}
+    {% else %}
+    {% include nav.html %}
+    {% endif %}
 
-      {% if page.title == "Home"%}
-        {{ content }}
-      {% else %}
-      <div class="content pure-g">
-        {{ content }}
-        <div class="pure-u-1-1">
-          <hr>
-        </div>
+    {% include hero.html %}
+
+    {% if page.title == "Home"%}
+    {{ content }}
+    {% else %}
+    <div class="content pure-g">
+      {{ content }}
+      <div class="pure-u-1-1">
+        <hr>
       </div>
-      {% endif %}
-      
-      {% if page.title == "Home" %}
-      {% else %}
-        {% include footer.html %}
-      {% endif %}
     </div>
-  </body>
+    {% endif %}
+
+    {% if page.title == "Home" %}
+    {% else %}
+    {% include footer.html %}
+    {% endif %}
+  </div>
+</body>
+
+<script>
+  // swup options
+  const options = {
+    scroll: false
+  }
+
+  // initialize swup
+  const swup = new Swup(options);
+
+  // scroll to top of page before replacing content
+  swup.on("willReplaceContent", function () {
+    document.body.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+    document.body.style.scrollBehavior = "smooth";
+  })
+</script>
+
 </html>

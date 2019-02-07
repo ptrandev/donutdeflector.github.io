@@ -18,7 +18,7 @@ let source = null;
 let dest = null;
 let rootFolder = null;
 
-gulp.task('css', function() {
+gulp.task('css', done => {
   const html = [
     '*.html',
     'about/*.html',
@@ -36,7 +36,8 @@ gulp.task('css', function() {
     'figure',
     'figcaption',
     '#markdown-toc',
-    'p'
+    'p',
+    'html.is-animating .transition-fade'
   ]
 
   const plugins = [
@@ -52,16 +53,19 @@ gulp.task('css', function() {
     .pipe(concat('main.min.css'))
     .pipe(postcss(plugins))
     .pipe(gulp.dest('assets/css'))
+    
+  done();
 })
 
-gulp.task('js', function() {
+gulp.task('js', done => {
   gulp.src('src/assets/js/*.js')
   .pipe(concat('main.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('assets/js'))
+  done();
 })
 
-gulp.task('img', function() {
+gulp.task('img', done => {
   gulpif(rootFolder, gulp.start('img-2160'));
   gulpif(rootFolder, gulp.start('img-1440'));
   gulp.start('img-1080');
@@ -69,6 +73,7 @@ gulp.task('img', function() {
   gulp.start('img-480');
   gulp.start('img-360');
   gulp.start('img-thumbnail');
+  done();
 });
 
 gulp.task('img-2160', function() {
@@ -142,24 +147,11 @@ gulp.task('img-thumbnail', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('src/assets/css/*.css', ['css']);
-  gulp.watch('src/assets/js/*.js', ['js']);
+  gulp.watch('src/assets/css/*.css', gulp.series('css'));
+  gulp.watch('src/assets/js/*.js', gulp.series('js'));
   gulp.watch('src/assets/images/*', function() {
     source = 'src/assets/images/*.{jpg,png}';
     dest = 'assets/images/';
-    rootFolder = true;
-    gulp.start('img');
-  });
-  gulp.watch('src/assets/images/posts/*', function() {
-    source = 'src/assets/images/posts/*.{jpg,png}';
-    dest = 'assets/images/posts';
-    rootFolder = false;
-    gulp.start('img');
-  });
-  gulp.watch('src/assets/images/projects/*', function() {
-    source = 'src/assets/images/projects/*.{jpg,png}';
-    dest = 'assets/images/projects';
-    rootFolder = false;
     gulp.start('img');
   });
 });

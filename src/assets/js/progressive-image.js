@@ -1,6 +1,6 @@
 // progressive-image.js, v1.1
 // by Craig Buckler, @craigbuckler
-if (window.addEventListener && window.requestAnimationFrame && document.getElementsByClassName) window.addEventListener('load', function() {
+if (window.addEventListener && window.requestAnimationFrame && document.getElementsByClassName) window.addEventListener('load', function () {
 
   // start
   var pItem = document.getElementsByClassName('progressive replace'), pCount, timer;
@@ -12,7 +12,7 @@ if (window.addEventListener && window.requestAnimationFrame && document.getEleme
   // DOM mutation observer
   if (MutationObserver) {
 
-    var observer = new MutationObserver(function() {
+    var observer = new MutationObserver(function () {
       if (pItem.length !== pCount) inView();
     });
     observer.observe(document.body, { subtree: true, childList: true, attributes: true, characterData: true });
@@ -26,7 +26,7 @@ if (window.addEventListener && window.requestAnimationFrame && document.getEleme
   // throttled scroll/resize
   function scroller() {
 
-    timer = timer || setTimeout(function() {
+    timer = timer || setTimeout(function () {
       timer = null;
       inView();
     }, 300);
@@ -37,7 +37,7 @@ if (window.addEventListener && window.requestAnimationFrame && document.getEleme
   // image in view?
   function inView() {
 
-    if (pItem.length) requestAnimationFrame(function() {
+    if (pItem.length) requestAnimationFrame(function () {
 
       var wT = window.pageYOffset, wB = wT + window.innerHeight, cRect, pT, pB, p = 0;
       while (p < pItem.length) {
@@ -81,16 +81,16 @@ if (window.addEventListener && window.requestAnimationFrame && document.getEleme
     // replace image
     function addImg() {
 
-      requestAnimationFrame(function() {
+      requestAnimationFrame(function () {
 
         // disable click
         if (href === item.href) {
           item.style.cursor = 'default';
-          item.addEventListener('click', function(e) { e.preventDefault(); }, false);
+          item.addEventListener('click', function (e) { e.preventDefault(); }, false);
         }
 
         // add full image
-        item.appendChild(img).addEventListener('animationend', function(e) {
+        item.appendChild(img).addEventListener('animationend', function (e) {
 
           // remove preview image
           var pImg = item.querySelector && item.querySelector('img.preview');

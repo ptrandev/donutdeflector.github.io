@@ -32,7 +32,6 @@
   -webkit-box-sizing: border-box;
 }
 
-html,
 body {
   padding: 0;
   margin: 0;
@@ -659,6 +658,15 @@ footer {
 
 .color-info span {
   font-size: 1.8rem;
+}
+
+.transition-fade {
+  transition: .3s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
 }
 
 @media (min-width: 0px) and (max-width: 370px) {
