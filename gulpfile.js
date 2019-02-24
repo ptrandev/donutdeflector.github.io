@@ -147,8 +147,8 @@ gulp.task('img-thumbnail', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('src/assets/css/*.css', gulp.series('css'));
-  gulp.watch('src/assets/js/*.js', gulp.series('js'));
+  gulp.watch('src/assets/css/*.css', ['css']);
+  gulp.watch('src/assets/js/*.js', ['js']);
   gulp.watch('src/assets/images/*', function() {
     source = 'src/assets/images/*.{jpg,png}';
     dest = 'assets/images/';
