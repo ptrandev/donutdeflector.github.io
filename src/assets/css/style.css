@@ -89,18 +89,17 @@ p {
 }
 
 a {
-  color: var(--color-primary);
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
   transition: all 0.3s ease-out;
 }
 
 a:focus,
 a:hover {
-  color: var(--color-secondary);
-  text-decoration: none;
+  color: var(--color-primary);
 }
 
-/* Helper Classes */
+/* Modifier Classes */
 
 .--uppercase {
   text-transform: uppercase;
@@ -108,6 +107,12 @@ a:hover {
 
 .--p1 {
   padding: 10px;
+}
+
+/* Content */
+
+.content {
+  padding: 70px 1.5rem 0 1.5rem;
 }
 
 /* Hairline */
@@ -140,14 +145,6 @@ hr {
   border-bottom: 2px dotted var(--color-primary);
 }
 
-/* Content */
-
-.content {
-  padding: 85px 10px 10px;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 /* Card */
 
 .card {
@@ -170,8 +167,7 @@ hr {
 /* Hero */
 
 .hero {
-  height: 100vh;
-  width: 100vw;
+  height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -179,6 +175,7 @@ hr {
 }
 
 .hero__title-container {
+  padding: 0 1rem 0 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -189,7 +186,8 @@ hr {
 }
 
 .hero__subtitle {
-  font-size: 3rem;
+  font-size: 2.8rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -210,13 +208,36 @@ hr {
   margin-right: 0;
 }
 
+/* Swup */
+
+.transition-fade {
+  transition: .3s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
 /* Media Queries */
 
 @media (max-width: 576px) {
   html, body {
-    font-size: 8px;
+    font-size: 9px;
   }
+}
 
+@media (min-width: 0px) and (max-width: 375px) {
+  .hero__title {
+    font-size: 4.9rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 576px) {
   .hero__title {
     font-size: 6.2rem;
   }

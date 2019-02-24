@@ -3,6 +3,7 @@ layout: project
 title:  Mendeleev
 tags: ['html/css', 'javascript', 'vue']
 meta:
+  featured: true
   date: 2018 Q1
   hero: /assets/images/projects/mendeleev-hero-480.jpg
   site: https://donutdeflector.me/mendeleev/

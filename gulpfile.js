@@ -1,36 +1,73 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var unCSS = require('gulp-uncss');
-var cleanCSS = require('gulp-clean-css');
-var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
-var mozjpeg  = require('imagemin-mozjpeg');
-var pngquant  = require('imagemin-pngquant');
-var gm = require('gulp-gm');
-var rename = require('gulp-rename');
-var changed = require('gulp-changed');
-var gulpif = require('gulp-if');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const uncss = require('uncss');
+const postcss_uncss = require('postcss-uncss');
+const imagemin = require('gulp-imagemin');
+const mozjpeg = require('imagemin-mozjpeg');
+const pngquant = require('imagemin-pngquant');
+const rename = require('gulp-rename');
+const gm = require('gulp-gm');
+const changed = require('gulp-changed');
+const gulpif = require('gulp-if');
 
-var source = null;
-var dest = null;
-var rootFolder = null;
+let source = null;
+let dest = null;
+let rootFolder = null;
 
-gulp.task('css', function() {
-  gulp.src(['src/assets/css/*.css'])
+gulp.task('css', done => {
+  const html = [
+    '*.html',
+    'about/*.html',
+    'blog/*.html',
+    'blog/categories/*.html',
+    'projects/*.html',
+    '_layouts/*.html',
+    '_includes/*.html',
+    '.transition-fade',
+    'html.is-animating .transition-fade'
+  ]
+
+  const ignore = [
+    '.progressive img.reveal',
+    '.entry img',
+    'blockquote',
+    'figure',
+    'figcaption',
+    '#markdown-toc',
+    'p',
+    'html.is-animating .transition-fade'
+  ]
+
+  const plugins = [
+    postcss_uncss({
+      html: html,
+      ignore: ignore
+    }),
+    autoprefixer(),
+    cssnano()
+  ]
+
+  gulp.src('src/assets/css/*.css')
     .pipe(concat('main.min.css'))
-    .pipe(unCSS({html: ['*.html', 'about/*.html', 'blog/*.html', 'blog/categories/*.html', 'projects/*.html', '_layouts/*.html', '_includes/*.html'], ignore: ['.progressive img.reveal', '.entry img', 'blockquote', 'figure', 'figcaption', '#markdown-toc']}))
-    .pipe(cleanCSS({level: '2'}))
-    .pipe(gulp.dest('assets/css'));
-});
+    .pipe(postcss(plugins))
+    .pipe(gulp.dest('assets/css'))
+    
+  done();
+})
 
-gulp.task('js', function() {
-  gulp.src(['src/assets/js/*.js'])
-    .pipe(concat('main.min.js'))
-    .pipe(uglify(''))
-    .pipe(gulp.dest('assets/js'));
-});
+gulp.task('js', done => {
+  gulp.src('src/assets/js/*.js')
+  .pipe(concat('main.min.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest('assets/js'))
+  done();
+})
 
-gulp.task('img', function() {
+gulp.task('img', done => {
   gulpif(rootFolder, gulp.start('img-2160'));
   gulpif(rootFolder, gulp.start('img-1440'));
   gulp.start('img-1080');
@@ -38,6 +75,7 @@ gulp.task('img', function() {
   gulp.start('img-480');
   gulp.start('img-360');
   gulp.start('img-thumbnail');
+  done();
 });
 
 gulp.task('img-2160', function() {
@@ -114,19 +152,8 @@ gulp.task('watch', function() {
   gulp.watch('src/assets/css/*.css', ['css']);
   gulp.watch('src/assets/js/*.js', ['js']);
   gulp.watch('src/assets/images/*', function() {
-    source = 'src/assets/images/*.{jpg,png}'
-    dest = 'assets/images/'
-    rootFolder = true;
-    gulp.start('img');
-  });
-  gulp.watch('src/assets/images/posts/*', function() {
-    source = 'src/assets/images/posts/*.{jpg,png}'
-    dest = 'assets/images/posts'
-    gulp.start('img');
-  });
-  gulp.watch('src/assets/images/projects/*', function() {
-    source = 'src/assets/images/projects/*.{jpg,png}'
-    dest = 'assets/images/projects'
+    source = 'src/assets/images/*.{jpg,png}';
+    dest = 'assets/images/';
     gulp.start('img');
   });
 });

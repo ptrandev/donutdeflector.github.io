@@ -8,7 +8,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 .luxbar-static {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
   width: 100%;
   position: absolute;
   top: 0;
@@ -61,7 +61,13 @@
   font-size: 3.8rem;
   font-family: 'Barlow Condensed';
   font-weight: 700;
-  padding: 18px 24px 18px 24px; }
+  margin: 18px 24px 18px 24px; }
+
+.luxbar-brand:hover,
+.luxbar-brand:focus {
+  color: var(--color-white);
+}
+
 
 .luxbar-menu {
   min-height: 70px;
@@ -82,19 +88,19 @@
   cursor: pointer;
 }
 
+.luxbar-item a {
+  padding-bottom: 3px;
+}
+
 .luxbar-item a:hover,
 .luxbar-item a:focus {
   color: var(--color-white);
-  text-decoration: none;
 }
 
 .luxbar-item {
   height: 70px;
   z-index: 1001;
-  transition: background-color 0.3s ease; }
-  .luxbar-item a {
-    padding: 18px 24px 18px 24px;
-    display: block; }
+  padding: 18px 24px 18px 24px; }
 
 .luxbar-hamburger {
   padding: 18px 24px 18px 24px;
@@ -195,7 +201,7 @@
 
 .luxbar-menu-dark .active,
 .luxbar-menu-dark .luxbar-item:hover {
-  background-color: var(--color-gray-2);
+  /* background-color: var(--color-gray-2); */
   color: inherit; }
 .luxbar-menu-dark .luxbar-hamburger span,
 .luxbar-menu-dark .luxbar-hamburger span::before,

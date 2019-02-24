@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/DonutDeflector/donutdeflector.github.io#readme",
   "devDependencies": {
+    "autoprefixer": "^9.4.8",
+    "cssnano": "^4.1.10",
     "gulp": "^3.9.1",
     "gulp-changed": "^3.2.0",
     "gulp-clean-css": "^3.9.4",
@@ -24,14 +26,18 @@
     "gulp-gm": "0.0.9",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.4.0",
-    "gulp-rename": "^1.2.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
     "gulp-strip-comments": "^2.5.2",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify": "^3.0.1",
     "gulp-uncss": "^1.0.6",
     "imagemin-mozjpeg": "^6.0.0",
-    "imagemin-pngquant": "^5.1.0"
+    "imagemin-pngquant": "^5.1.0",
+    "postcss-uncss": "^0.16.1",
+    "uncss": "^0.16.2"
   },
   "dependencies": {
-    "hoek": "^5.0.3"
+    "hoek": "^5.0.3",
+    "natives": "^1.1.6"
   }
 }
